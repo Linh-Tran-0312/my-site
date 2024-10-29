@@ -1,0 +1,38 @@
+body {
+    font-family: monospace;
+    background-color: #300924;
+    color: #00ff00;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .terminal {
+
+    padding: 20px;
+  }
+  
+  .output {
+    margin-bottom: 20px;
+  }
+  
+  .input-line {
+    display: flex;
+    align-items: center;
+  }
+  
+  .prompt {
+    margin-right: 10px;
+    color: #4E9A06;
+    font-weight: bold;
+  }
+  
+  input {
+    background: none;
+    border: none;
+    color: #00ff00;
+    outline: none;
+    font-family: monospace;
+    font-size: 16px;
+    width: 100%;
+  }
+  
