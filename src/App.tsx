@@ -7,9 +7,10 @@ import TerminalPage from "./pages/terminal";
 function App() {
   return (
     <>
+    <TerminalPage />
       <Router>
         <Routes>
-          <Route path="/" element={<TerminalPage />} />
+          {/* <Route path="/" element={<TerminalPage />} /> */}
           <Route path="/portfolio" element={<PortfolioPage />} />
         </Routes>
       </Router>
