@@ -13,13 +13,14 @@
   "bugs": {
     "url": "https://github.com/Linh-Tran-0312/my-site/issues"
   },
-  "homepage": "https://linh-tran-0312.github.io/my-site",
+  "homepage": "https://linh-tran-0312.github.io/my-site/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "gh-pages": "^6.2.0",
