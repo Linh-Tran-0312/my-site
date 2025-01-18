@@ -2,14 +2,14 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   faChevronLeft,
   faChevronRight,
-  faCode,
+  faCode
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import parse from "html-react-parser";
 import { forwardRef, useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
-import SectionWrapper from "../SectionWrapper";
 import useMediaQuery from "../../../../hooks/useMediaQuery";
+import SectionWrapper from "../SectionWrapper";
 import "./Code.css";
 
 type Project = {
@@ -18,7 +18,7 @@ type Project = {
   title: string;
   summary: string;
   source: string;
-  backgroundColor: string;
+  themeColor: string;
 };
 type PillListProps = {
   length: number;
@@ -59,6 +59,7 @@ const Code = forwardRef<HTMLDivElement, { projects: Project[] }>(
       setIndex(newIndex);
       setProject(projects[newIndex]);
     };
+
     return (
       <SectionWrapper
         ref={ref}
@@ -69,10 +70,10 @@ const Code = forwardRef<HTMLDivElement, { projects: Project[] }>(
           </span>
         }
       >
-        <Row className="d-flex w-100 mt-4 d-flex align-items-center justify-content-center showcase">
+        <Row className="ms-0 d-flex w-100 mt-4 d-flex align-items-center justify-content-center showcase">
           <Col
-            lg={6}
-            className={`position-relative d-flex flex-column justify-content-between align-items-center py-4 px-4 showcase__left ${
+            md={6}
+            className={`d-flex flex-column justify-content-between align-items-center py-4 px-4 showcase__left ${
               isMobile ? "d-none" : ""
             }`}
           >
@@ -82,46 +83,39 @@ const Code = forwardRef<HTMLDivElement, { projects: Project[] }>(
               <PillList
                 length={projects.length}
                 activeIndex={index}
-                activeColor={project.backgroundColor}
+                activeColor={project.themeColor}
               />
 
-              <div className="d-flex justify-content-center align-items-start w-100 mt-4">
-                <img
-                  src={project.img}
-                  style={{
-                    width: "80%",
-                    height: "400px",
-                    objectFit: "contain",
-                    borderRadius: 4,
-                  }}
-                />
-              </div>
+                <img src={project.img} className="showcase__image mt-4" />
             </div>
-            <div className="w-100 d-flex justify-content-end">
-              <Button
-                style={{ color: project.backgroundColor }}
-                className="showcase__button showcase__button--prev"
-                onClick={handlePrev}
-              >
-                <Icon icon={faChevronLeft} className="showcase__button-prev-icon" />
-                <span className="showcase__button-prev-text ps-2">Prev</span>
+            <div className="w-100" style={{ color: project.themeColor }}>
+              <Button className="showcase__button" onClick={handlePrev}>
+                <Icon icon={faChevronLeft} className="pe-2" />
+                <span>Prev</span>
               </Button>
             </div>
           </Col>
           <Col
-            lg={6}
-            xs={12}
-            style={{ backgroundColor: project.backgroundColor }}
-            className="position-relative  text-white h-100 d-flex flex-column justify-content-between position-relative py-4 px-4  showcase_right"
+            md={6}
+            sm={12}
+            style={{
+              backgroundColor: project.themeColor,
+            }}
+            className="bw-mask position-relative  text-white h-100 d-flex flex-column justify-content-between position-relative py-4 px-4  showcase_right"
           >
             <div>
               <div className="d-flex justify-content-between align-items-center w-100">
                 <h4 className="text-truncate vertical-middle">
                   {isMobile ? project.title : "Details"}
                 </h4>
-                <a href={project.source} target="_blank" rel="noreferrer">
+                <a
+                  href={project.source}
+                  target="_blank"
+                  rel="noreferrer"
+                  id={"git"}
+                >
                   <Button className="showcase__git-button" size="sm">
-                    Open In <Icon icon={faGithub} className="ps-1"/>
+                    Open In <Icon icon={faGithub} className="ps-1" />
                   </Button>
                 </a>
               </div>
@@ -129,7 +123,7 @@ const Code = forwardRef<HTMLDivElement, { projects: Project[] }>(
                 {isMobile && (
                   <img
                     src={project.img}
-                    className="w-100 h-auto bg-white mb-4"
+                    className="showcase__image mb-4"
                   />
                 )}
                 <div className="showcase__detail-content">
@@ -137,13 +131,13 @@ const Code = forwardRef<HTMLDivElement, { projects: Project[] }>(
                 </div>
               </div>
             </div>
-            <div>
+            <div className="d-flex justify-content-end">
               <Button
-                className="showcase__button showcase__button--next"
+                className="showcase__button"
                 onClick={handleNext}
               >
-                <span className="showcase__button-next-text pe-2">Next</span>
-                <Icon icon={faChevronRight} className="showcase__button-next-icon" />
+                <span className="pe-2">Next</span>
+                <Icon icon={faChevronRight} />
               </Button>
             </div>
           </Col>

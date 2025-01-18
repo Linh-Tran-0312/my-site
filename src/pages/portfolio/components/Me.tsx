@@ -1,7 +1,7 @@
-import { Container, Row,Col, Image } from "react-bootstrap";
 import parse from 'html-react-parser';
-import Typewriter from 'typewriter-effect';
 import { forwardRef, useMemo } from "react";
+import { Col, Container, Image, Row } from "react-bootstrap";
+import Typewriter from 'typewriter-effect';
 import color from "../../../tokens/color";
 const getGreeting = () => {
     const now = new Date();
@@ -33,7 +33,7 @@ const  Me = forwardRef<HTMLDivElement, {me: any}>(({me}, ref) => {
           </div>
         </Col>
         <Col xs={12} lg={7} sm={12} className="my-3">
-          <h2 className="fontCali my-name">
+          <h2 className="my-name">
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
@@ -47,7 +47,7 @@ const  Me = forwardRef<HTMLDivElement, {me: any}>(({me}, ref) => {
                   )
                   .pauseFor(1500)
                   .deleteAll()
-                  .typeString(`${me.greeting}`)
+                  .typeString(`<span style="color: ${color.highlight}">${me.greeting}</span>`)
                   .pauseFor(4000)
                   .start();
               }}

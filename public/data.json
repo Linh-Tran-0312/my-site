@@ -15,34 +15,34 @@
       "id": 2,
       "img": "./project/logo.svg",
       "title": "Vite Dynamic Prefetch plugin",
-      "summary": "<p>A Vite plugin that supports prefetching dynamic modules at runtime.</p><p>Published as an NPM package.</p><p>In curated list of awesome things related to Vite.js.</p>",
+      "summary": "<p>A Vite plugin designed to optimize web application performance by enabling prefetching for dynamic imports at runtime.</p><p><strong>Key Highlights</strong>:</p><ul><li><strong>Enhanced Performance</strong>: Automatically generates prefetch links for dynamically imported modules to reduce loading delays.</li><li><strong>Simple Integration</strong>: Easily integrated into Vite projects with minimal setup.</li><li><strong>Published on NPM</strong>: Available as an NPM package for easy installation.</li><li><strong>Featured in Vite.js Community</strong>: Included in curated lists of awesome Vite.js tools and plugins.</li></ul>",
       "source": "https://github.com/Linh-Tran-0312/vite-plugin-dynamic-prefetch",
-       "backgroundColor": "#8670F3"
+       "themeColor": "#8670F3"
     },
     {
       "id": 1,
       "img": "./project/storykit.png",
       "title": "Storykit Library",
-      "summary": "<p>An ongoing React library project built with Storybook, featuring custom components and hooks</p><p>Live demo and documentation with Storybook</p>",
+      "summary": "<p>A React library project built with Storybook, featuring custom components and reusable hooks.</p><p><strong>Key Highlights</strong>:</p><ul><li><strong>Custom Components &amp; Hooks</strong>: Provides reusable solutions for state management and UI needs.</li><li><strong>Live Documentation</strong>: Integrated with Storybook for interactive demos and documentation.</li><li><strong>CI/CD Integration</strong>: Automated testing and deployment using GitHub Actions.</li><li><strong>Docker Support</strong>: Simplified setup for local development and deployment.</li></ul>",
       "source": "https://github.com/Linh-Tran-0312/storykit",
-      "backgroundColor": "#E95181"
+      "themeColor": "#E95181"
     },
     {
       "id": 3,
      "img": "./project/belle.png",
       "title": "Belle E-commerce",
-      "summary": "<p>This is an e-commerce web application built using PERN Stack</p><p>Shopper features include browsing products, adding items to cart, viewing blog content, etc...</p><p>Administrative features include the ability to create and manage product and blog pages (as editor role), to manage order and user list and to generate sales reports (as admin role)</p>",
+      "summary": "<p><strong>Description</strong><br>Belle-Ecommerce is a full-stack web application built with the PERN stack (PostgreSQL, Express, React, Node.js) that offers typical e-commerce functionalities, including product browsing for customers and shop management for administrators. It served as the final project for the <em>Software Analysis and Design</em> course.</p><p><strong>Key Features</strong></p><ul><li><p><strong>Customer Experience:</strong></p><ul><li>Browse products by name, category, brand, and price range.</li><li>Add, update, and remove items from the shopping cart.</li><li>Place orders and review products after purchase (in progress).</li><li>Search blog posts by title or topic and view content.</li></ul></li><li><p><strong>Shop Management:</strong></p><ul><li><strong>Blog (Editor role):</strong> Create, update, and delete blog topics and posts.</li><li><strong>Product (Editor role):</strong> Manage products, categories, brands, and variants.</li><li><strong>User (Admin role):</strong> Manage user profiles and search by personal info.</li><li><strong>Order (Admin role):</strong> Search orders, update statuses, and generate reports.</li><li><strong>Reports (Admin role):</strong> Display monthly stats, sales, and top-selling products.</li></ul></li></ul><p><strong>Technology Stack</strong></p><ul><li><strong>Backend:</strong> PostgreSQL, TypeORM, Express (with TypeScript), TSOA (OpenAPI REST API), JSON Web Token, Morgan, and Winston for logging.</li><li><strong>Frontend:</strong> React, Material-UI, Redux (with Thunk middleware), Axios, Cloudinary for image storage.</li></ul>",
       "source": "https://github.com/Linh-Tran-0312/Belle-Ecommerce",
-        "backgroundColor": "#000000"
+      "themeColor": "#000000"
   
     },
     {
       "id": 4,
       "img": "./project/alichat.png",
       "title": "ALi Chat",
-      "summary": "<p>This is a MERN chat application with basic chat features</p><p>Allow users to send messages with emojis and photos in personal chat or group chat</p>",
+      "summary": "<p>ALi Chat is a simple MERN stack web application designed to implement and demonstrate skills in Node.js, React, Redux, and Socket.IO. The app provides basic chat functionality with real-time messaging.</p><p><strong>Key Features</strong></p><ul><li><strong>Authentication:</strong> Login, register, and social login with Google and Facebook.</li><li><strong>Search:</strong> Search for users by name or username.</li><li><strong>Messaging:</strong> Send text, emojis, and images, with support for replying to specific messages.</li><li><strong>Group Chat:</strong> Manage group members as a host (add/remove members) or leave as a member.</li></ul><p><strong>Technology Stack</strong></p><ul><li><strong>Backend:</strong> Node.js, Express, MongoDB (MongoAtlas), Mongoose, Socket.IO, Cloudinary, JSON Web Token.</li><li><strong>Frontend:</strong> React, Material-UI, Redux (with Thunk middleware), Axios, and Socket.IO-Client.</li></ul>",
       "source": "https://github.com/Linh-Tran-0312/Ali-Chat",
-        "backgroundColor": "#778794"
+      "themeColor": "#778794"
     }
   ],
   "blogs": [

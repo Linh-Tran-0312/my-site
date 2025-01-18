@@ -6,69 +6,36 @@
 .showcase__left {
   background-color: #ebebeb;
   height: 100%;
-
 }
 
 .showcase__right {
   height: 100%;
 }
-.showcase__detail-content {
-  overflow-y: auto;
-  max-height: 200px;
+
+.showcase__button--prev {
+  border-top-left-radius: 100px;/* Makes the top-left corner a circle */
+  border-top-right-radius: 0; 
+  right: 0px;
+  bottom: 0px;
 }
+
 
 .showcase__button {
   position: relative;
   background-color: transparent;
   border: none;
-  transition: width 0.3s ease-out;
-  width: 40px;
-}
-
-.showcase__button-next-text {
-  position: absolute;
-  left: 16px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.6s ease-in-out;  
-}
-.showcase__button--next:hover .showcase__button-next-text {
-   visibility: visible;
-   opacity: 1;
-   transition: opacity 0.6s ease-in-out; 
-
-}
-.showcase__button--next:hover .showcase__button-next-icon {
-  padding-left: 36px;
-
-}
-
-.showcase__button-prev-text {
-  position: absolute;
-  /* bottom: 6px; */
-  right: 16px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.6s ease-in-out;  
-}
-.showcase__button--prev:hover .showcase__button-prev-text {
-   visibility: visible;
-   opacity: 1;
-   transition: opacity 0.6s ease-in-out; 
-
-}
-.showcase__button--prev:hover .showcase__button-prev-icon {
-  padding-right: 36px !important;
+  transition: all 0.3s ease-out;
+  color: inherit;
 }
 
 .showcase__button:hover {
-  width: 90px;
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
+  color: inherit;
 }
 
 .showcase__button:active {
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-color: rgba(255, 255, 255, 0.7) !important;
   border: none
 }
 
@@ -79,34 +46,76 @@
 }
 
 .showcase__git-button:hover {
-  background-color: rgba(255, 255, 255, 0.2) !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
   border: 1px solid white !important;
 
 }
 
+.showcase__image {
+  width: 80% !important;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
 
 .pill-container {
   display: flex;
   width: fit-content;
   gap: 8px;
   margin-top: 16px;
-  /* Space between pills */
   align-items: center;
-  /* left: calc(100% - 44px); */
-
 }
 
 
 .pill {
   width: 30px;
-  /* Adjust the width of each pill */
   height: 8px;
-  /* Adjust the height of each pill */
   border-radius: 4px;
-  /* Make it look like a pill */
   background-color: transparent;
-  /* Default pill color */
   transition: background-color 0.3s ease;
-  /* Smooth color transition */
   border: 1px solid white;
+}
+
+.bw-mask {
+  position: relative;
+  overflow: hidden;
+}
+
+.bw-mask::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  mix-blend-mode: saturation;
+  transition: all 0.6s ease-in;
+  z-index: 1000;
+}
+
+.bw-mask:hover::before {
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.3s ease-out; 
+}
+
+.bw-mask > * {
+  position: relative;
+  z-index: 2;
+}
+.showcase__detail-content {
+  overflow-y: auto;
+  max-height: 450px;
+}
+@media screen and (max-width: 768px) {
+  .showcase__detail-content {
+    overflow-y: auto;
+    max-height: 290px;
+  }
+  .showcase__image {
+    width: 100% !important;
+    height: 150px !important;
+    background-color: white;
+  }
 }

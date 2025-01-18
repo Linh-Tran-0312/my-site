@@ -31,7 +31,7 @@ function NavBar({nav, inView, scrollIntoView }: Props) {
             href="/"
             className="h5 pl-2 pt-3 text-truncate text-color pointer"
           >
-          <strong>About Linh</strong>
+           About Linh
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">

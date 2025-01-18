@@ -1,6 +1,6 @@
 import parse from "html-react-parser";
-import SectionWrapper from "./SectionWrapper";
 import { forwardRef } from "react";
+import SectionWrapper from "./SectionWrapper";
 type Experience = {
   period: string;
   position: string;

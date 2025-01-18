@@ -1,14 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useCallback, useEffect, useState, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import NavBar from "./components/nav/Nav";
 import Code from "./components/code/Code";
-import LoadingScreen from "./components/LoadingScreen";
+import LoadingScreen from "./components/loading/Loading";
+import Welcome from "./components/loading/Welcome";
 import Me from "./components/Me";
+import NavBar, { NavItemType } from "./components/nav/Nav";
 import Study from "./components/Study";
 import Work from "./components/Work";
 import Write from "./components/write/Write";
-import { NavItemType } from "./components/nav/Nav";
 
 const getData = async (path: string) => {
   let data = await fetch(path);
@@ -59,7 +59,10 @@ const PortfolioPage = () => {
   }, []);
 
   useEffect(() => {
-    getData("data.json").then((data) => setData(data));
+    setTimeout(() => {
+      getData("data.json").then((data) => setData(data));
+    },2000)
+
   }, []);
 
   if (!data) {
@@ -67,7 +70,9 @@ const PortfolioPage = () => {
   }
 
   return (
-    <div>
+    <>
+    <Welcome/>
+    <div> 
       <NavBar
         nav={data.nav}
         inView={{
@@ -87,11 +92,13 @@ const PortfolioPage = () => {
       <Study ref={combinedRef("study")} study={data.study} />
       <div
         style={{ height: 100 }}
-        className="d-flex justify-content-center align-items-center border"
+        className="d-flex justify-content-center flex-column align-items-center border"
       >
-        Created by 💚 Linh Tran
+        <span>Thanks for visiting my site</span>
+       <span className="text-secondary"><small> Created by 💚 Linh Tran</small></span>
       </div>
     </div>
+    </>
   );
 };
 export default PortfolioPage;
