@@ -51,7 +51,7 @@
       "category": "How to",
       "title": "How to create and publish an NPM package",
       "description": "When working with Node.js and its ecosystem, we usually use third-party libraries that help us to handle complicated logic, which speeds up the development process.",
-      "thumbnail": "/blog/npm.png",
+      "thumbnail": "./blog/npm.png",
       "link": "https://linhtran-dev.hashnode.dev/how-to-create-and-publish-an-npm-package"
     },
     {
@@ -59,7 +59,7 @@
       "category": "TypeScript",
       "title": "Exploring the power of type systems in TypeScript with type manipulation",
       "description": "In addition to offering a variety of useful utility types, TypeScript also provides several operators and special types that enable us to flexibly create types from types.",
-      "thumbnail": "/blog/ts_type_manipulation.png",
+      "thumbnail": "./blog/ts_type_manipulation.png",
       "link": "https://linhtran-dev.hashnode.dev/exploring-the-power-of-type-systems-in-typescript-with-type-manipulation"
     },
     {
@@ -67,7 +67,7 @@
       "category": "Book Review",
       "title": "Review Design for Developer book",
       "description": "Today’s book is a fantastic resource, beautifully written and illustrated by By Adrian Twarog & George Moller, titled “Design for Developers“.",
-      "thumbnail": "/blog/design_for_developer.png",
+      "thumbnail": "./blog/design_for_developer.png",
       "link": "https://linhtran-dev.hashnode.dev/how-to-create-and-publish-an-npm-package"
     },
     {
@@ -75,7 +75,7 @@
       "category": "TypeScript",
       "title": "[Part 1] What the tsconfig.json! - Top-level options you should know about",
       "description": "As you may know, the tsconfig.json in the root of a project directory allows developers to customize the TypeScript compiler settings beyond the default configuration..",
-      "thumbnail": "/blog/ts_tsconfig.png",
+      "thumbnail": "./blog/ts_tsconfig.png",
       "link": "https://linhtran-dev.hashnode.dev/part-1-what-the-tsconfigjson-top-level-options-you-should-know-about"
     }
   ],

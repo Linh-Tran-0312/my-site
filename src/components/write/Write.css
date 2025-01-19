@@ -71,7 +71,7 @@
   }
 
   .desk-background {
-    background: url('./blog/desk.jpg');
+    background: url('/blog/desk.jpg');
   }
   .white-blur-background {
     background: rgba(255, 255, 255,0.9);

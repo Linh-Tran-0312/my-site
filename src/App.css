@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Poppins&display=swap');
 @font-face {
   font-family: "Roobert";
-  src: url("./RoobertTRIAL-Regular.otf") format('opentype');
+  src: url("/RoobertTRIAL-Regular.otf") format('opentype');
 } 
 * {
   box-sizing: border-box;
@@ -11,7 +11,7 @@
 }
 @font-face {
   font-family: "Roobert Mono Light";
-  src: url("./RoobertMonoTRIAL-Light.otf") format('opentype');
+  src: url("/RoobertMonoTRIAL-Light.otf") format('opentype');
 } 
 
  

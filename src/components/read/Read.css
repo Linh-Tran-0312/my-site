@@ -3,8 +3,7 @@
    color: white;
 }
 .book-background {
-    
-    background: url('https://static.vecteezy.com/system/resources/previews/031/332/161/non_2x/a-book-pile-close-up-on-a-study-desk-front-view-pile-book-for-festival-of-world-book-day-national-book-day-or-national-education-day-stack-of-colorful-books-on-study-table-by-ai-generated-free-photo.jpg');
+   background: url('https://static.vecteezy.com/system/resources/previews/031/332/161/non_2x/a-book-pile-close-up-on-a-study-desk-front-view-pile-book-for-festival-of-world-book-day-national-book-day-or-national-education-day-stack-of-colorful-books-on-study-table-by-ai-generated-free-photo.jpg');
    background-size:cover;
 }
 .book-background > div {
