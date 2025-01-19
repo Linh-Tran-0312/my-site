@@ -13,11 +13,11 @@
   "projects": [
     {
       "id": 2,
-      "img": "./project/logo.svg",
+      "img": "./project/vite-awsome.svg",
       "title": "Vite Dynamic Prefetch plugin",
       "summary": "<p>A Vite plugin designed to optimize web application performance by enabling prefetching for dynamic imports at runtime.</p><p><strong>Key Highlights</strong>:</p><ul><li><strong>Enhanced Performance</strong>: Automatically generates prefetch links for dynamically imported modules to reduce loading delays.</li><li><strong>Simple Integration</strong>: Easily integrated into Vite projects with minimal setup.</li><li><strong>Published on NPM</strong>: Available as an NPM package for easy installation.</li><li><strong>Featured in Vite.js Community</strong>: Included in curated lists of awesome Vite.js tools and plugins.</li></ul>",
       "source": "https://github.com/Linh-Tran-0312/vite-plugin-dynamic-prefetch",
-       "themeColor": "#8670F3"
+       "themeColor": "#3412db"
     },
     {
       "id": 1,
@@ -25,7 +25,7 @@
       "title": "Storykit Library",
       "summary": "<p>A React library project built with Storybook, featuring custom components and reusable hooks.</p><p><strong>Key Highlights</strong>:</p><ul><li><strong>Custom Components &amp; Hooks</strong>: Provides reusable solutions for state management and UI needs.</li><li><strong>Live Documentation</strong>: Integrated with Storybook for interactive demos and documentation.</li><li><strong>CI/CD Integration</strong>: Automated testing and deployment using GitHub Actions.</li><li><strong>Docker Support</strong>: Simplified setup for local development and deployment.</li></ul>",
       "source": "https://github.com/Linh-Tran-0312/storykit",
-      "themeColor": "#E95181"
+      "themeColor": "#d11a54"
     },
     {
       "id": 3,
@@ -91,18 +91,34 @@
     "education": {
       "title": "Education",
       "details": [
-        "University of Science - VNUHCM",
-        "Bachelor's degree of Information Technology",
+        "<strong>University of Science - VNUHCM.</strong>",
+        "Bachelor's degree of Information Technology <br/>(Second Degree).",
         "2019 - 2022"
       ]
     },
     "certificates": {
-      "title": "Certificates",
+      "title": "Certifications",
       "details": [
-        "TOEIC certificate with score 915 issued by ETS.",
-        "AWS Cloud Practitioner Essentials issued by AWS.",
-        "Agile Scrum Foundation issued by Simplilearn."
+        {
+          "title": "English",
+          "subtitle": "TOEIC 915",
+          "logo": "./study/ets-logo.png",
+          "link": "study/toeic.jpg"
+        },
+        {
+          "title": "Cloud",
+          "subtitle": "Cloud Practitioner Essentials",
+          "logo": "./study/aws-logo.png",
+          "link": "study/aws.jpg"
+        },
+        {
+          "title": "Agile",
+          "subtitle": "Agile Scrum Foundation",
+          "logo": "./study/simple-logo.png",
+          "link": "study/agile.jpg"
+        }
       ]
+      
     }  
   }
 
