@@ -13,9 +13,9 @@ const Work = forwardRef<HTMLDivElement, { experience: Experience[]}>(({experienc
       {experience.map((e) => (
         <div className="mt-4">
           <div className="d-flex w-100 justify-content-between">
-            <h4>
+            <h5>
               <strong>{e.company}</strong>
-            </h4>
+            </h5>
             <p>{e.period}</p>
           </div>
           <p className="text-secondary">{e.position}</p>

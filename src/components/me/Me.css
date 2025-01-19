@@ -1,0 +1,17 @@
+
+.img-ava-container {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+ 
+    background-position: bottom;
+    background-size: cover;
+}
+.img-ava {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 1;
+ 
+}

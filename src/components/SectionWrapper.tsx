@@ -8,7 +8,7 @@ const SectionWrapper = forwardRef<
   return (
     <Container className="my-5 scroll-margin-top" ref={ref}>
       <Container className="py-5">
-        <h2 className="section-title">{title}</h2>
+        <h3 className="section-title">{title}</h3>
         {children}
       </Container>
     </Container>

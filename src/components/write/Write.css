@@ -3,7 +3,7 @@
     flex-direction: column;
     border-top: 1px solid #000000;
     overflow: hidden;
-    max-width: 400px;
+    /* max-width: 400px; */
     height: 400px;
     background-color: #fff;
     font-family: Arial, sans-serif;
@@ -16,19 +16,25 @@
   }
   
   .custom-card__category {
-    font-size: 13px;
+    font-size: 0.875rem;
     color: #666;
     margin-bottom: 8px;
     text-transform: uppercase;
   }
   
   .custom-card__title {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     margin: 0 0 8px;
     color: #333;
     cursor: pointer;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .custom-card__title:hover {
@@ -36,10 +42,15 @@
   }
   
   .custom-card__subtitle {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #555;
     margin: 0;
-    font-family: 'Roobert';
+    
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;  
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .custom-card__image {
@@ -60,7 +71,7 @@
   }
 
   .desk-background {
-    background: url('./desk.jpg');
+    background: url('./blog/desk.jpg');
   }
   .white-blur-background {
     background: rgba(255, 255, 255,0.9);

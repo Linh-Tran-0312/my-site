@@ -51,4 +51,7 @@
  .nav__icon:hover {
     color: #0286F0;
 
-}
+}.navbar-collapse {
+    flex-grow: inherit !important;
+  }
+  

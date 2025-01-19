@@ -2,7 +2,9 @@ import parse from 'html-react-parser';
 import { forwardRef, useMemo } from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import Typewriter from 'typewriter-effect';
-import color from "../../../tokens/color";
+import color from '../../tokens/color';
+import './Me.css';
+ 
 const getGreeting = () => {
     const now = new Date();
     const hour = now.getHours();

@@ -8,7 +8,7 @@ import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import parse from "html-react-parser";
 import { forwardRef, useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
-import useMediaQuery from "../../../../hooks/useMediaQuery";
+import useMediaQuery from "../../hooks/useMediaQuery";
 import SectionWrapper from "../SectionWrapper";
 import "./Code.css";
 
@@ -78,7 +78,7 @@ const Code = forwardRef<HTMLDivElement, { projects: Project[] }>(
             }`}
           >
             <div className="d-flex flex-column align-items-center w-100">
-              <h4>{project.title}</h4>
+              <h5>{project.title}</h5>
 
               <PillList
                 length={projects.length}
@@ -105,17 +105,17 @@ const Code = forwardRef<HTMLDivElement, { projects: Project[] }>(
           >
             <div>
               <div className="d-flex justify-content-between align-items-center w-100">
-                <h4 className="text-truncate vertical-middle">
+                <h5 className="text-truncate vertical-middle">
                   {isMobile ? project.title : "Details"}
-                </h4>
+                </h5>
                 <a
                   href={project.source}
                   target="_blank"
                   rel="noreferrer"
                   id={"git"}
                 >
-                  <Button className="showcase__git-button" size="sm">
-                    Open In <Icon icon={faGithub} className="ps-1" />
+                  <Button className="showcase__git-button" size="sm" style={{color: project.themeColor}}>
+                   Open in <Icon icon={faGithub} className="ps-1" />
                   </Button>
                 </a>
               </div>

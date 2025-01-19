@@ -20,7 +20,7 @@ const CustomCard = ({ blog }: { blog: Blog }) => {
         <p className="custom-card__subtitle">{blog.description}</p>
       </div>
       <div className="custom-card__image">
-        <img src={blog.thumbnail} alt="The Anxious Generation book cover" />
+        <img src={blog.thumbnail} alt="Blog thumbnail" />
       </div>
     </div>
   );
@@ -30,18 +30,18 @@ const Write = forwardRef<HTMLDivElement, { blogs: Blog[] }>(
   ({ blogs }, ref) => {
     return (
       <SectionWrapper title="✍️ What I Write" ref={ref}>
-        <Row className="d-flex mt-4 custom">
+        <Row className="d-flex mt-4">
           <Row className="mb-4">
-            <Col lg={8} sm={6}>
+            <Col lg={8} sm={12}>
               <div className="border w-100 h-100 desk-background p-4">
                 <Row className="h-100">
                   <Col lg={6}></Col>
                   <Col
                     lg={6}
                     sm={12}
-                    className="d-flex justify-content-center h-100  align-items-end"
+                    className="d-flex justify-content-center h-100 align-items-end"
                   >
-                    <div className="white-blur-background w-100 p-4">
+                    <div className="white-blur-background p-4">
                       <h5> Write to Reflect and Share</h5>
                       <p>
                         I started my own series,
@@ -60,14 +60,14 @@ const Write = forwardRef<HTMLDivElement, { blogs: Blog[] }>(
                 </Row>
               </div>
             </Col>
-            <Col lg={4} sm={6}>
+            <Col lg={4} sm={12}>
               <CustomCard blog={blogs[0]} />
             </Col>
           </Row>
           <Row>
             {blogs.map((blog, index) =>
               index !== 0 ? (
-                <Col key={blog.id} lg={4} sm={6} className="mb-4">
+                <Col key={blog.id} lg={4} sm={12} className="mb-4">
                   <CustomCard blog={blog} />
                 </Col>
               ) : null
