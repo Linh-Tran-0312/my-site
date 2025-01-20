@@ -14,13 +14,6 @@
   src: url("/RoobertMonoTRIAL-Light.otf") format('opentype');
 } 
 
- 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: black;
-    color: white;
-  }
-}
 html {
   font-size: 16px;
 }
@@ -59,17 +52,21 @@ body::-webkit-scrollbar {
   --color-background: rgb(255,255,255);
   --color-dark-bg:rgb(29, 32, 34);
   --color-text: rgb(0,0,0);
-  --color-nav: rgb(0,0,0);  
-  --color-nav-active: #9dceff;  
-  --color-wrapper: rgba(0,0,0,0);  
-  --color-nv-bg: rgb(255,255,255); 
-  --color-util-button: rgb(255,255,255); 
-  --color-nav-toggler: rgba(0,0,0,0);  
-  --color-my-name: #74879a; 
-  --color-overlay: rgba(0,0,0,0.5); 
 } 
 
-
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+  :root {
+    --color-background: rgb(0, 0, 0);
+    --color-text: rgb(255, 255, 255);
+  }
+}
+.bg-default {
+  background-color: var(--color-background)
+}
 .bg-white {
   background-color: #ffffff;
 }

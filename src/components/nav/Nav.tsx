@@ -21,7 +21,7 @@ type Props = {
 function NavBar({nav, inView, scrollIntoView }: Props) {
     return ( 
         <Navbar
-        className=" border-bottom bg-white d-flex flex-row align-items-center"
+        className="border-bottom bg-default d-flex flex-row align-items-center"
         expand="md"
         style={{ zIndex: 800 }}
         sticky="top"
@@ -29,7 +29,7 @@ function NavBar({nav, inView, scrollIntoView }: Props) {
         <Container className="">
           <Navbar.Brand
             href="/"
-            className="h5 pl-2 pt-3 text-truncate text-color pointer"
+            className="h5 pl-2 pt-3 text-truncate pointer"
           >
            About Linh
           </Navbar.Brand>
@@ -39,7 +39,7 @@ function NavBar({nav, inView, scrollIntoView }: Props) {
                 {
                     NavItems.map((item: NavItemType) => (
                         <Nav.Link
-                        className="d-flex flex-column justify-content-center align-items-center"
+                        className="d-flex flex-column justify-content-center align-items-center nav-link"
                         onClick={() => scrollIntoView(item)}    
                       >
                         <span
@@ -58,14 +58,14 @@ function NavBar({nav, inView, scrollIntoView }: Props) {
                 <Nav.Link
                   target="_blank"
                   href="https://github.com/Linh-Tran-0312"
-                  className="pointer nav__icon"
+                  className="pointer nav__icon nav-link"
                 >
                   <Icon icon={faGithub} size="lg" />
                 </Nav.Link>
                 <Nav.Link
                   target="_blank"
                   href="https://www.linkedin.com/in/ch%C3%AD-linh-tr%E1%BA%A7n-a54928200/"
-                  className="pointer nav__icon"
+                  className="pointer nav__icon nav-link"
                 >
                   <Icon icon={faLinkedin} size="lg" />
                 </Nav.Link>

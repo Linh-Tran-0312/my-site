@@ -23,7 +23,7 @@ const  Me = forwardRef<HTMLDivElement, {me: any}>(({me}, ref) => {
       className="d-flex justify-content-center align-items-center container"
       style={{ minHeight: "calc(100vh - 160px)" }}
     >
-      <Row className="container bg-white p-5 mt-2">
+      <Row className="container p-5 mt-2">
         <Col
           xs={12}
           lg={5}

@@ -51,8 +51,6 @@
     width: 100vw;
     height: 100vh;
     background-color: var(--color-dark-bg);  
-    /* background-color: rgb(29, 32, 34);   */
-
     z-index: 10000; 
     animation: slideUp 2.5s ease-in-out forwards;  
     padding-top: 40vh;
@@ -72,10 +70,8 @@
     70% {
       top : 0%
     }
-  
-   
     100% {
-      top: -100%; 
+      top: -120%; 
     }
   }
   
