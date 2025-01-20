@@ -50,12 +50,40 @@
  }
  .nav__icon:hover {
     color: #0286F0;
-
 }
 .navbar-collapse {
     flex-grow: inherit !important;
 }
 .nav-link {
-    color: var(--color-text);
+    color: var(--color-nav-text);
+}
+ 
+.navbar-toggler {
+     border: 1px solid white !important;
+    padding: 8px;
+}
+.navbar-toggler:focus {
+   
+    box-shadow: none;
+}
+ 
+.navbar-toggler:hover {
+    border: 1px solid lightblue !important;
+}
+.navbar-toggler-emoji {
+   font-size: 1.75rem !important;
+   color: var(--color-nav-text);
+   border-radius: 4px;
+}
+ 
+.navbar-toggler-emoji-code {
+    font-size: 1em !important;
+}
+@media (max-width: 768px)  {
+    .nav__icon {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+  
 }
   

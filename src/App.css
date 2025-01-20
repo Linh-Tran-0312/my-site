@@ -52,6 +52,7 @@ body::-webkit-scrollbar {
   --color-background: rgb(255,255,255);
   --color-dark-bg:rgb(29, 32, 34);
   --color-text: rgb(0,0,0);
+  --color-nav-text: rgb(88, 88, 88);
 } 
 
 @media (prefers-color-scheme: dark) {
@@ -62,6 +63,7 @@ body::-webkit-scrollbar {
   :root {
     --color-background: rgb(0, 0, 0);
     --color-text: rgb(255, 255, 255);
+    --color-nav-text:  rgb(214, 211, 211);
   }
 }
 .bg-default {
@@ -72,6 +74,9 @@ body::-webkit-scrollbar {
 }
 .bg-wheat {
   background-color: wheat;
+}
+.text-default {
+  color: var(--color-text);
 }
 .text-primary {
   color: #9dceff !important

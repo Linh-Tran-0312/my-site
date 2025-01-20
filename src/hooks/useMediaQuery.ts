@@ -5,7 +5,7 @@ const getMediaMatches = (query: string) => {
 };
 function useMediaQuery(query: string) {
   const [matches, setMatches] = useState(getMediaMatches(query));
-  const handleChange = (event: any) => {
+  const handleChange = (event: MediaQueryList | MediaQueryListEvent) => {
     setMatches(event.matches);
   };
 

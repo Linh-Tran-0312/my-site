@@ -19,7 +19,7 @@
   }
   .loader {
     color: #ffffff;
-    font-size: 4px;
+    font-size: 0.3rem;
     margin: 50px auto;
     position: relative;
     text-indent: -9999em;
@@ -67,23 +67,25 @@
     0% {
       top: 0;  
     }
-    70% {
+    60% {
       top : 0%
     }
+    90% {
+      top: -100%
+    }
     100% {
-      top: -120%; 
+      top: -200%; 
     }
   }
   
   .text-slide-up {
     position: absolute;
     top: 50%;
-    animation: fadeslideUp 12s infinite;  
+    animation: fadeslideUp 9s infinite;  
   }
   .dot-slide-up {
     position: relative;
     animation: dotSlideUp 1500ms ease-in; 
-    /* color:#0286F0 ; */
   }
   
   @keyframes dotSlideUp {
@@ -97,31 +99,40 @@
   @keyframes fadeslideUp {
     0% {
       opacity: 0;
-      transform: translateY(-10%); 
-      -ms-transform: translateY(-10%);
+      transform: translateY(0%); 
+      -ms-transform: translateY(0%);
     }
     10% {
       opacity: 1;
-      transform: translateY(-50%); 
-      -ms-transform: translateY(-50%);
+      transform: translateY(-70%); 
+      -ms-transform: translateY(-70%);
     }
     20% {
       opacity: 1;
-      transform: translateY(-50%); 
-      -ms-transform: translateY(-50%);
+      transform: translateY(-70%); 
+      -ms-transform: translateY(-70%);
     }
     25% {
       opacity: 0;
-      transform: translateY(-60%);
-      -ms-transform: translateY(-60%); 
+      transform: translateY(-100%);
+      -ms-transform: translateY(-100%); 
     }
     100% {
       opacity: 0;
-      transform: translateY(-60%);
-      -ms-transform: translateY(-60%); 
+      transform: translateY(-80%);
+      -ms-transform: translateY(-80%); 
     }
   }
-
+  @keyframes load7 {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40% {
+      box-shadow: 0 2.5em 0 0;
+    }
+  }
   @media screen and (max-width: 568px) {
     .welcome-text {
       font-size: 2rem;
