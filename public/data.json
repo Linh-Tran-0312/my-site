@@ -4,33 +4,49 @@
     "work": "Work",
     "code":"Code",
     "write": "Write",
-    "study": "Study"    
+    "study": "Study",
+    "read": "Read"    
   },
   "about": {
     "greeting": "My name's Linh",
-    "introduction": "<p>I'm an software engineer with almost three years of experience.</p><p>Passionate about creating engaging and innovative web-based applications.</p><p>Aiming to leverage my skills to drive impactful contributions to your organization while continuing to stay ahead in the evolving field of web development.</p><p>Contact me via ✉️ linhtran.atwork@gmail.com</p>"
+    "introduction": "<p>I'm an software engineer with almost three years of experience.</p><p>Passionate about creating engaging and innovative web-based applications.</p><p>Aiming to leverage my skills to drive impactful contributions to your organization while continuing to stay ahead in the evolving field of web development.</p><p>Contact me via ✉️ linhtran.atwork@gmail.com</p>",
+    "profiles": [
+      {
+        "type": "linkedin",
+        "title": "LinkedIn Profile",
+        "link": "https://www.linkedin.com/in/ch%C3%AD-linh-tr%E1%BA%A7n-a54928200/"
+      },
+      {
+        "type": "github",
+        "title": "Github Profile",
+        "link": "https://github.com/Linh-Tran-0312"
+      }
+    ]
   },
   "projects": [
     {
       "id": 2,
-      "img": "./project/vite-awsome.svg",
+      "thumbnail": "./project/vite-awsome.png",
       "title": "Vite Dynamic Prefetch plugin",
+      "description": "A Vite plugin that supports prefetching dynamic modules at runtime. Published as an NPM package and featured in Vite.js Community.",
       "summary": "<p>A Vite plugin designed to optimize web application performance by enabling prefetching for dynamic imports at runtime.</p><p><strong>Key Highlights</strong>:</p><ul><li><strong>Enhanced Performance</strong>: Automatically generates prefetch links for dynamically imported modules to reduce loading delays.</li><li><strong>Simple Integration</strong>: Easily integrated into Vite projects with minimal setup.</li><li><strong>Published on NPM</strong>: Available as an NPM package for easy installation.</li><li><strong>Featured in Vite.js Community</strong>: Included in curated lists of awesome Vite.js tools and plugins.</li></ul>",
       "source": "https://github.com/Linh-Tran-0312/vite-plugin-dynamic-prefetch",
        "themeColor": "#3412db"
     },
     {
       "id": 1,
-      "img": "./project/storykit.png",
+      "thumbnail": "./project/storykit.png",
       "title": "Storykit Library",
+      "description": "A React library project built with Storybook, featuring custom components and reusable hooks. CI/CD with Github Action.",
       "summary": "<p>A React library project built with Storybook, featuring custom components and reusable hooks.</p><p><strong>Key Highlights</strong>:</p><ul><li><strong>Custom Components &amp; Hooks</strong>: Provides reusable solutions for state management and UI needs.</li><li><strong>Live Documentation</strong>: Integrated with Storybook for interactive demos and documentation.</li><li><strong>CI/CD Integration</strong>: Automated testing and deployment using GitHub Actions.</li><li><strong>Docker Support</strong>: Simplified setup for local development and deployment.</li></ul>",
       "source": "https://github.com/Linh-Tran-0312/storykit",
       "themeColor": "#d11a54"
     },
     {
       "id": 3,
-     "img": "./project/belle.png",
+     "thumbnail": "./project/belle.png",
       "title": "Belle E-commerce",
+      "description": "Belle-Ecommerce is a full-stack web application built with the PERN stack (PostgreSQL, Express, React, Node.js) that offers typical e-commerce functionalities.",
       "summary": "<p><strong>Description</strong><br>Belle-Ecommerce is a full-stack web application built with the PERN stack (PostgreSQL, Express, React, Node.js) that offers typical e-commerce functionalities, including product browsing for customers and shop management for administrators. It served as the final project for the <em>Software Analysis and Design</em> course.</p><p><strong>Key Features</strong></p><ul><li><p><strong>Customer Experience:</strong></p><ul><li>Browse products by name, category, brand, and price range.</li><li>Add, update, and remove items from the shopping cart.</li><li>Place orders and review products after purchase (in progress).</li><li>Search blog posts by title or topic and view content.</li></ul></li><li><p><strong>Shop Management:</strong></p><ul><li><strong>Blog (Editor role):</strong> Create, update, and delete blog topics and posts.</li><li><strong>Product (Editor role):</strong> Manage products, categories, brands, and variants.</li><li><strong>User (Admin role):</strong> Manage user profiles and search by personal info.</li><li><strong>Order (Admin role):</strong> Search orders, update statuses, and generate reports.</li><li><strong>Reports (Admin role):</strong> Display monthly stats, sales, and top-selling products.</li></ul></li></ul><p><strong>Technology Stack</strong></p><ul><li><strong>Backend:</strong> PostgreSQL, TypeORM, Express (with TypeScript), TSOA (OpenAPI REST API), JSON Web Token, Morgan, and Winston for logging.</li><li><strong>Frontend:</strong> React, Material-UI, Redux (with Thunk middleware), Axios, Cloudinary for image storage.</li></ul>",
       "source": "https://github.com/Linh-Tran-0312/Belle-Ecommerce",
       "themeColor": "#000000"
@@ -38,8 +54,9 @@
     },
     {
       "id": 4,
-      "img": "./project/alichat.png",
+      "thumbnail": "./project/alichat.png",
       "title": "ALi Chat",
+      "description": "ALi Chat is a simple MERN stack web application designed to implement and demonstrate skills in Node.js, React, Redux, and Socket.IO.",
       "summary": "<p>ALi Chat is a simple MERN stack web application designed to implement and demonstrate skills in Node.js, React, Redux, and Socket.IO. The app provides basic chat functionality with real-time messaging.</p><p><strong>Key Features</strong></p><ul><li><strong>Authentication:</strong> Login, register, and social login with Google and Facebook.</li><li><strong>Search:</strong> Search for users by name or username.</li><li><strong>Messaging:</strong> Send text, emojis, and images, with support for replying to specific messages.</li><li><strong>Group Chat:</strong> Manage group members as a host (add/remove members) or leave as a member.</li></ul><p><strong>Technology Stack</strong></p><ul><li><strong>Backend:</strong> Node.js, Express, MongoDB (MongoAtlas), Mongoose, Socket.IO, Cloudinary, JSON Web Token.</li><li><strong>Frontend:</strong> React, Material-UI, Redux (with Thunk middleware), Axios, and Socket.IO-Client.</li></ul>",
       "source": "https://github.com/Linh-Tran-0312/Ali-Chat",
       "themeColor": "#778794"
@@ -84,7 +101,8 @@
       "period": "Feb 2022 - Sep 2024",
       "position": "Software Engineer",
       "company": "SalesHood",
-      "description": "<p>SalesHood is a SaaS platform that enables businesses to automate their sales processes and enhance sales performance.</p><p>As part of the Client Site team, I am primarily responsible for frontend development. My role involves collaborating with product managers and designers in an Agile/Scrum environment to define and implement software solutions.</p><p>Key responsibilities include optimizing feature performance, ensuring product quality, and enhancing performance by implementing robust unit and end-to-end tests.</p><p>Having hands-on experience: Micro frontend, React, React Context, Redux for state management, React Query for data fetching, Ant Design for UI components, Figma for design, Vite for bundling, Jest with Testing Library for unit testing and Playwright  for end to end testing.</p>"
+      "description": "<p>SalesHood is a SaaS platform that enables businesses by delivering highly personalized selling, coaching and training experiences.</p><p>Participating in product development using the Agile/Scrum methodology. Working with product managers and designers to define software solutions that will satisfy customers’ needs.</p><p>Key responsibilities include implementing features, optimizing feature performance, ensuring product quality by implementing robust unit and end-to-end tests.</p>",
+      "myrole": "<p>Having hands-on experience: Micro frontend, React, React Context, Redux for state management, React Query for data fetching, Ant Design for UI components, Figma for design, Vite for bundling, Jest with Testing Library for unit testing and Playwright  for end to end testing.</p>"
     }
   ],
   "study" : {
