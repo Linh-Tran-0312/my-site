@@ -10,7 +10,7 @@
    color: white;
 }
 .book-background {
-   background: url('./book-bg.avif');
+   background: url('book-bg.avif');
     background-size:cover;
 }
 .book-background > div {

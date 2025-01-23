@@ -1,5 +1,5 @@
 .code-background {
-  background: url('./project/tech.jpg') ;
+  background: url('project/tech.jpg') ;
 }
 .projects .custom-card__image img {
   object-fit: contain;

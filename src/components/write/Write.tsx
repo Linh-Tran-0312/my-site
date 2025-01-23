@@ -2,6 +2,7 @@ import { forwardRef } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import SectionWrapper from '../share/SectionWrapper';
 import { CustomCard, CardProps } from '../share/custom-card/CustomCard';
+import './Write.css';
 
 const Write = forwardRef<HTMLDivElement, { blogs: CardProps[] }>(
   ({ blogs }, ref) => {
@@ -10,10 +11,7 @@ const Write = forwardRef<HTMLDivElement, { blogs: CardProps[] }>(
         <Row className='d-flex mt-4'>
           <Row className='mb-4'>
             <Col lg={8} sm={12}>
-              <div
-                className='border w-100 h-100 desk-background p-4'
-                style={{ background: 'url(/blog/desk.jpg)' }}
-              >
+              <div className='border w-100 h-100 desk-background p-4'>
                 <Row className='h-100'>
                   <Col lg={6}></Col>
                   <Col
