@@ -32,7 +32,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
+  .custom-card__content > a {
+    color: var(--color-text);
+  }
+  .custom-card__content-card__title > a:hover {
+    color: #0286F0;
+  }
   .custom-card__title:hover {
     color: #0286F0;
   }

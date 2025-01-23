@@ -30,7 +30,7 @@
       "title": "Vite Dynamic Prefetch plugin",
       "description": "A Vite plugin that supports prefetching dynamic modules at runtime. Published as an NPM package and featured in Vite.js Community.",
       "summary": "<p>A Vite plugin designed to optimize web application performance by enabling prefetching for dynamic imports at runtime.</p><p><strong>Key Highlights</strong>:</p><ul><li><strong>Enhanced Performance</strong>: Automatically generates prefetch links for dynamically imported modules to reduce loading delays.</li><li><strong>Simple Integration</strong>: Easily integrated into Vite projects with minimal setup.</li><li><strong>Published on NPM</strong>: Available as an NPM package for easy installation.</li><li><strong>Featured in Vite.js Community</strong>: Included in curated lists of awesome Vite.js tools and plugins.</li></ul>",
-      "source": "https://github.com/Linh-Tran-0312/vite-plugin-dynamic-prefetch",
+      "link": "https://github.com/Linh-Tran-0312/vite-plugin-dynamic-prefetch",
        "themeColor": "#3412db"
     },
     {
@@ -39,7 +39,7 @@
       "title": "Storykit Library",
       "description": "A React library project built with Storybook, featuring custom components and reusable hooks. CI/CD with Github Action.",
       "summary": "<p>A React library project built with Storybook, featuring custom components and reusable hooks.</p><p><strong>Key Highlights</strong>:</p><ul><li><strong>Custom Components &amp; Hooks</strong>: Provides reusable solutions for state management and UI needs.</li><li><strong>Live Documentation</strong>: Integrated with Storybook for interactive demos and documentation.</li><li><strong>CI/CD Integration</strong>: Automated testing and deployment using GitHub Actions.</li><li><strong>Docker Support</strong>: Simplified setup for local development and deployment.</li></ul>",
-      "source": "https://github.com/Linh-Tran-0312/storykit",
+      "link": "https://github.com/Linh-Tran-0312/storykit",
       "themeColor": "#d11a54"
     },
     {
@@ -48,7 +48,7 @@
       "title": "Belle E-commerce",
       "description": "Belle-Ecommerce is a full-stack web application built with the PERN stack (PostgreSQL, Express, React, Node.js) that offers typical e-commerce functionalities.",
       "summary": "<p><strong>Description</strong><br>Belle-Ecommerce is a full-stack web application built with the PERN stack (PostgreSQL, Express, React, Node.js) that offers typical e-commerce functionalities, including product browsing for customers and shop management for administrators. It served as the final project for the <em>Software Analysis and Design</em> course.</p><p><strong>Key Features</strong></p><ul><li><p><strong>Customer Experience:</strong></p><ul><li>Browse products by name, category, brand, and price range.</li><li>Add, update, and remove items from the shopping cart.</li><li>Place orders and review products after purchase (in progress).</li><li>Search blog posts by title or topic and view content.</li></ul></li><li><p><strong>Shop Management:</strong></p><ul><li><strong>Blog (Editor role):</strong> Create, update, and delete blog topics and posts.</li><li><strong>Product (Editor role):</strong> Manage products, categories, brands, and variants.</li><li><strong>User (Admin role):</strong> Manage user profiles and search by personal info.</li><li><strong>Order (Admin role):</strong> Search orders, update statuses, and generate reports.</li><li><strong>Reports (Admin role):</strong> Display monthly stats, sales, and top-selling products.</li></ul></li></ul><p><strong>Technology Stack</strong></p><ul><li><strong>Backend:</strong> PostgreSQL, TypeORM, Express (with TypeScript), TSOA (OpenAPI REST API), JSON Web Token, Morgan, and Winston for logging.</li><li><strong>Frontend:</strong> React, Material-UI, Redux (with Thunk middleware), Axios, Cloudinary for image storage.</li></ul>",
-      "source": "https://github.com/Linh-Tran-0312/Belle-Ecommerce",
+      "link": "https://github.com/Linh-Tran-0312/Belle-Ecommerce",
       "themeColor": "#000000"
   
     },
@@ -69,7 +69,7 @@
       "title": "How to create and publish an NPM package",
       "description": "When working with Node.js and its ecosystem, we usually use third-party libraries that help us to handle complicated logic, which speeds up the development process.",
       "thumbnail": "./blog/npm.png",
-      "link": "https://linhtran-dev.hashnode.dev/how-to-create-and-publish-an-npm-package"
+      "link": "https://linhnote.hashnode.dev/how-to-create-and-publish-an-npm-package"
     },
     {
       "id": 2,
@@ -77,7 +77,7 @@
       "title": "Exploring the power of type systems in TypeScript with type manipulation",
       "description": "In addition to offering a variety of useful utility types, TypeScript also provides several operators and special types that enable us to flexibly create types from types.",
       "thumbnail": "./blog/ts_type_manipulation.png",
-      "link": "https://linhtran-dev.hashnode.dev/exploring-the-power-of-type-systems-in-typescript-with-type-manipulation"
+      "link": "https://linhnote.hashnode.dev/exploring-the-power-of-type-systems-in-typescript-with-type-manipulation"
     },
     {
       "id": 3,
@@ -85,7 +85,7 @@
       "title": "Review Design for Developers book",
       "description": "Today’s book is a fantastic resource, beautifully written and illustrated by By Adrian Twarog & George Moller, titled “Design for Developers“.",
       "thumbnail": "./blog/design_for_developer.png",
-      "link": "https://linhtran-dev.hashnode.dev/how-to-create-and-publish-an-npm-package"
+      "link": "https://linhnote.hashnode.dev/how-to-create-and-publish-an-npm-package"
     },
     {
       "id": 4,
@@ -93,7 +93,7 @@
       "title": "[Part 1] What the tsconfig.json! - Top-level options you should know about",
       "description": "As you may know, the tsconfig.json in the root of a project directory allows developers to customize the TypeScript compiler settings beyond the default configuration..",
       "thumbnail": "./blog/ts_tsconfig.png",
-      "link": "https://linhtran-dev.hashnode.dev/part-1-what-the-tsconfigjson-top-level-options-you-should-know-about"
+      "link": "https://linhnote.hashnode.dev/part-1-what-the-tsconfigjson-top-level-options-you-should-know-about"
     }
   ],
   "experience": [

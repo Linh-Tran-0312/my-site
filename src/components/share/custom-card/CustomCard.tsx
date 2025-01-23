@@ -10,13 +10,16 @@ export type CardProps = {
 };
 
 export const CustomCard = (props: CardProps) => {
+  console.log(props);
   return (
     <div className='custom-card'>
       <div className='custom-card__content'>
         <p className='custom-card__category'>{props.category}</p>
-        <h2 className='custom-card__title' title={props.tooltip}>
-          {props.title}
-        </h2>
+        <a href={props.link} target='_blank'>
+          <h2 className='custom-card__title' title={props.tooltip}>
+            {props.title}
+          </h2>
+        </a>
         <p className='custom-card__subtitle'>{props.description}</p>
       </div>
       <div className='custom-card__image'>
