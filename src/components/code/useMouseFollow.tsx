@@ -18,27 +18,7 @@ const isMouseInsideDiv = (
   }
   return false;
 };
-// const CustomCursor = ({ top, left, area, clickHanlder }: any) => {
-//     // if(!area) return null;
-//     return (
-//       <div
-//         className="custom-cursor"
-//         style={{
-//           left: `${left}px`,
-//           top: `${top}px`,
-//           visibility: area ? "visible" : "hidden",
-//         }}
-//         onClick={clickHanlder[area]}
-//       >
-//         <Icon
-//           icon={area === "left" ? faCircleArrowLeft : faCircleArrowRight}
-//           fontSize={30}
-//           color={area === "left" ? "black" : "white"}
-//         />
-//       </div>
-//     );
-//   };
-type CursorArea = 'left' | 'right' | null;
+sorArea = 'left' | 'right' | null;
 // const EXCLUSIVE_TAGNAMES = ['BUTTON', 'svg', 'path'];
 const useMouseFollow = (
   ref: React.RefObject<HTMLElement>,
@@ -68,7 +48,6 @@ const useMouseFollow = (
         const isOnLeftArea = e.clientX < left + middle;
         setCursorArea(isOnLeftArea ? 'left' : 'right');
 
-        console.log(e.clientX, e.clientY);
         const x = e.clientX - left;
         const y = e.clientY - top;
         setCursorPosition({ x, y });

@@ -38,7 +38,7 @@ export default tseslint.config(
           trailingComma: 'es5',
         },
       ],
-      '@typescript-eslint/no-explicit-any': ['error', { ignoreRestArgs: true }],
+      '@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }],
       '@typescript-eslint/ban-ts-comment': 0
     },
   },

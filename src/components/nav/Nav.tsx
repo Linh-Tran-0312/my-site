@@ -1,17 +1,13 @@
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faBars, faCode } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { useMemo } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import './Nav.css';
-import { faCode, faBars } from '@fortawesome/free-solid-svg-icons';
-import { useMemo } from 'react';
-const NavItems = ['me', 'work', 'code', 'write', 'study'] as const;
+const NavItems = ['me', 'work', 'code', 'write', 'read', 'study'] as const;
 export type NavItemType = (typeof NavItems)[number];
+
 export type Nav = {
-  code: string;
-  me: string;
-  work: string;
-  write: string;
-  study: string;
+  [key in NavItemType]: string;
 };
 type Props = {
   nav: Nav;
@@ -27,6 +23,7 @@ const ToggleIcons = {
     <Icon icon={faCode} className='navbar-toggler-emoji-code' fontSize={26} />
   ),
   write: '✍️',
+  read: '📚',
   study: '🎓',
 };
 
@@ -74,7 +71,7 @@ function NavBar({ nav, inView, scrollIntoView }: Props) {
                 </span>
               </Nav.Link>
             ))}
-            <Nav className='d-flex flex-row justify-content-center align-items-start'>
+            {/* <Nav className='d-flex flex-row justify-content-center align-items-start'>
               <Nav.Link
                 target='_blank'
                 href='https://github.com/Linh-Tran-0312'
@@ -89,7 +86,7 @@ function NavBar({ nav, inView, scrollIntoView }: Props) {
               >
                 <Icon icon={faLinkedin} size='lg' />
               </Nav.Link>
-            </Nav>
+            </Nav> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

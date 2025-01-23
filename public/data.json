@@ -82,7 +82,7 @@
     {
       "id": 3,
       "category": "Book Review",
-      "title": "Review Design for Developer book",
+      "title": "Review Design for Developers book",
       "description": "Today’s book is a fantastic resource, beautifully written and illustrated by By Adrian Twarog & George Moller, titled “Design for Developers“.",
       "thumbnail": "./blog/design_for_developer.png",
       "link": "https://linhtran-dev.hashnode.dev/how-to-create-and-publish-an-npm-package"

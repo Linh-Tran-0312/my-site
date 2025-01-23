@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import SectionWrapper from '../SectionWrapper';
+import SectionWrapper from '../share/SectionWrapper';
 import parseHtml from 'html-react-parser';
 import Badge, { BadgeProps } from './badge/Badge';
 

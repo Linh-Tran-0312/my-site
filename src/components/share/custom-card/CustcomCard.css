@@ -38,10 +38,9 @@
   }
   
   .custom-card__subtitle {
-    font-size: 0.875rem;
+    font-size: 0.875rem !important;
     color: #555;
     margin: 0;
-    
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;  
@@ -65,27 +64,3 @@
     height: 100%;
     object-fit: cover;
   }
-
-  .desk-background {
-    background: url('/blog/desk.jpg');
-  }
-  .white-blur-background {
-    background: rgba(255, 255, 255,0.9);
-    color: #000000;
-    
-  }
-  .blog-card__title {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; /* Number of lines to show */
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .blog-card__description {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5; /* Number of lines to show */
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  

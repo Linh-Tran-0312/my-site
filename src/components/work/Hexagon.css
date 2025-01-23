@@ -1,0 +1,84 @@
+ 
+.hex-container {
+  --wrp: 500px;
+}
+ 
+.hex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.hex-wrap {
+  --r: 0.24935;
+  --r-1: calc(1 / calc(1 - var(--r)));
+  --g: 5px;
+  --w: calc(var(--r-1) * var(--wrp) / 4 - 2 * var(--r-1) * var(--g));
+  margin: 0 -1px;
+  justify-content: center;
+}
+.hex-wrap > .hex:nth-child(2n) {
+  transform: translateY(calc(50% + var(--g)));
+}
+
+.hex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background: center/cover #482245;
+  width: var(--w);
+  height: calc(0.8658 * var(--w));
+  margin: var(--g) calc(var(--r) / -2 * var(--w) + var(--g));
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.hex::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  mix-blend-mode: saturation;
+  transition: all 0.6s ease-in;
+  z-index: 500;
+}
+
+.hex:hover::before {
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.3s ease-out; 
+}
+.hex.hex-empty {
+  visibility: hidden;
+}
+
+.hex:hover {
+  z-index: 9;
+}
+
+.bg-white-1 {
+ background-color: #F7F8FD;
+}
+
+.bg-blue-1 {
+  background-color:#356D9B;
+}
+
+.bg-blue-2 {
+  background-color:#1A569A;
+}
+
+.bg-green-1 {
+  background-color:#5CD3A0;
+}
+
+.text-blue-1 {
+  color: #356D9B;
+}

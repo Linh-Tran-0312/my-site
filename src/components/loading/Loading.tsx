@@ -1,9 +1,7 @@
 import './Loading.css';
-function LoadingScreen({ className }: { className?: string }) {
+function LoadingScreen() {
   return (
-    <div
-      className={`loading d-flex flex-column justify-content-center ${className}`}
-    >
+    <div className={`loading d-flex flex-column`}>
       <div className='loader'></div>
     </div>
   );

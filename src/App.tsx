@@ -1,28 +1,23 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import './App.css';
 import Code from './components/code/Code';
 import LoadingScreen from './components/loading/Loading';
 import Welcome from './components/loading/Welcome';
-import Me from './components/me/Me';
-import NavBar, { NavItemType } from './components/nav/Nav';
-import Study from './components/study/Study';
-import Work from './components/Work';
-import Write from './components/write/Write';
-import './App.css';
+import Me, { About } from './components/me/Me';
+import NavBar, { Nav, NavItemType } from './components/nav/Nav';
 import Read from './components/read/Read';
-import { About } from './components/me/Me';
-import { Experience } from './components/Work';
-import { Project } from './components/code/Code';
-import { Blog } from './components/write/Write';
-import { StudyProps } from './components/study/Study';
-import { Nav } from './components/nav/Nav';
+import { CardProps } from './components/share/custom-card/CustomCard';
+import Study, { StudyProps } from './components/study/Study';
+import Work, { Experience } from './components/work/Work';
+import Write from './components/write/Write';
 
 type Data = {
   about: About;
   nav: Nav;
-  projects: Project[];
-  blogs: Blog[];
+  projects: CardProps[];
+  blogs: CardProps[];
   experience: Experience[];
   study: StudyProps;
 };
@@ -37,6 +32,7 @@ const App = () => {
   const workRef = useRef<HTMLDivElement>();
   const codeRef = useRef<HTMLDivElement>();
   const writeRef = useRef<HTMLDivElement>();
+  const readRef = useRef<HTMLDivElement>();
   const studyRef = useRef<HTMLDivElement>();
 
   const navItemRef = {
@@ -45,13 +41,15 @@ const App = () => {
     code: codeRef,
     write: writeRef,
     study: studyRef,
+    read: readRef,
   };
 
-  const [meRefFn, meInView] = useInView({ threshold: 0.5 });
-  const [writeRefFn, writeInView] = useInView({ threshold: 0.2 });
-  const [codeRefFn, codeInView] = useInView({ threshold: 0.6 });
+  const [meRefFn, meInView] = useInView({ threshold: 0.8 });
+  const [writeRefFn, writeInView] = useInView({ threshold: 0.5 });
+  const [codeRefFn, codeInView] = useInView({ threshold: 0.5 });
   const [workRefFn, workInView] = useInView({ threshold: 0.5 });
-  const [studyRefFn, studyInView] = useInView({ threshold: 0.8 });
+  const [studyRefFn, studyInView] = useInView({ threshold: 0.9 });
+  const [readRefFn, readInView] = useInView({ threshold: 0.8 });
 
   const navItemRefFn = {
     me: meRefFn,
@@ -59,6 +57,7 @@ const App = () => {
     code: codeRefFn,
     write: writeRefFn,
     study: studyRefFn,
+    read: readRefFn,
   };
   const combinedRef = useCallback(
     (navItem: NavItemType) => (node: HTMLDivElement) => {
@@ -77,13 +76,12 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       getData('data.json').then((data) => setData(data));
-    }, 2000);
+    }, 100);
   }, []);
 
   if (!data) {
     return <LoadingScreen />;
   }
-
   return (
     <>
       <Welcome />
@@ -96,15 +94,15 @@ const App = () => {
             me: meInView,
             write: writeInView,
             study: studyInView,
+            read: readInView,
           }}
           scrollIntoView={scrollIntoView}
         />
         <Me ref={combinedRef('me')} me={data.about} />
         <Work ref={combinedRef('work')} experience={data.experience} />
-
         <Code ref={combinedRef('code')} projects={data.projects} />
         <Write ref={combinedRef('write')} blogs={data.blogs} />
-        <Read />
+        <Read ref={combinedRef('read')} />
         <Study ref={combinedRef('study')} study={data.study} />
         <div
           style={{ height: 100 }}

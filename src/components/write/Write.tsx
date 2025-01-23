@@ -1,39 +1,19 @@
 import { forwardRef } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import SectionWrapper from '../SectionWrapper';
-import './Write.css';
-export type Blog = {
-  id: number;
-  category: string;
-  title: string;
-  description: string;
-  thumbnail: string;
-  link: string;
-};
+import SectionWrapper from '../share/SectionWrapper';
+import { CustomCard, CardProps } from '../share/custom-card/CustomCard';
 
-const CustomCard = ({ blog }: { blog: Blog }) => {
-  return (
-    <div className='custom-card'>
-      <div className='custom-card__content'>
-        <p className='custom-card__category'>{blog.category}</p>
-        <h2 className='custom-card__title'>{blog.title}</h2>
-        <p className='custom-card__subtitle'>{blog.description}</p>
-      </div>
-      <div className='custom-card__image'>
-        <img src={blog.thumbnail} alt='Blog thumbnail' />
-      </div>
-    </div>
-  );
-};
-
-const Write = forwardRef<HTMLDivElement, { blogs: Blog[] }>(
+const Write = forwardRef<HTMLDivElement, { blogs: CardProps[] }>(
   ({ blogs }, ref) => {
     return (
       <SectionWrapper title='✍️ What I Write' ref={ref}>
         <Row className='d-flex mt-4'>
           <Row className='mb-4'>
             <Col lg={8} sm={12}>
-              <div className='border w-100 h-100 desk-background p-4'>
+              <div
+                className='border w-100 h-100 desk-background p-4'
+                style={{ background: 'url(/blog/desk.jpg)' }}
+              >
                 <Row className='h-100'>
                   <Col lg={6}></Col>
                   <Col
@@ -41,7 +21,7 @@ const Write = forwardRef<HTMLDivElement, { blogs: Blog[] }>(
                     sm={12}
                     className='d-flex justify-content-center h-100 align-items-end'
                   >
-                    <div className='white-blur-background p-4'>
+                    <div className='bg-white-blur p-4'>
                       <h5> Write to Reflect and Share</h5>
                       <p>
                         I started my own series,
@@ -61,14 +41,14 @@ const Write = forwardRef<HTMLDivElement, { blogs: Blog[] }>(
               </div>
             </Col>
             <Col lg={4} sm={12}>
-              <CustomCard blog={blogs[0]} />
+              <CustomCard {...blogs[0]} tooltip='View this article' />
             </Col>
           </Row>
           <Row>
             {blogs.map((blog, index) =>
               index !== 0 ? (
                 <Col key={blog.id} lg={4} sm={12} className='mb-4'>
-                  <CustomCard blog={blog} />
+                  <CustomCard {...blog} tooltip='View this article' />
                 </Col>
               ) : null
             )}

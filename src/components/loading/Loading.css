@@ -4,6 +4,7 @@
     width: 100vw  !important;
     height: 100vh;
     background-color: var(--color-dark-bg);
+    padding-top: 40vh;
   }
   
   .loader,
@@ -52,9 +53,8 @@
     height: 100vh;
     background-color: var(--color-dark-bg);  
     z-index: 10000; 
-    animation: slideUp 2.5s ease-in-out forwards;  
-    padding-top: 40vh;
-   
+    animation: slideUp 2.5s ease-in-out forwards;
+   padding-top: 40vh;
   }
   
   .welcome-text {
@@ -80,7 +80,7 @@
   
   .text-slide-up {
     position: absolute;
-    top: 50%;
+    top: 45%;
     animation: fadeslideUp 9s infinite;  
   }
   .dot-slide-up {

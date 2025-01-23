@@ -1,0 +1,12 @@
+.sh-img {
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+    position: absolute;
+}
+.sh-img > img {
+    z-index: 999;
+    position: relative;
+}
+.sh-img:hover {
+    background-color: transparent;
+}

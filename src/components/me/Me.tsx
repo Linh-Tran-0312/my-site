@@ -1,14 +1,21 @@
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import parse from 'html-react-parser';
 import { forwardRef, useMemo, useState } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import Typewriter from 'typewriter-effect';
 import color from '../../tokens/color';
 import './Me.css';
-
+const profileIcons = {
+  github: faGithub,
+  linkedin: faLinkedin,
+};
 export type About = {
   greeting: string;
   introduction: string;
+  profiles: { type: keyof typeof profileIcons; title: string; link: string }[];
 };
+
 const getGreeting = () => {
   const now = new Date();
   const hour = now.getHours();
@@ -35,7 +42,7 @@ const Me = forwardRef<HTMLDivElement, { me: About }>(({ me }, ref) => {
           sm={12}
           className='slideInDown my-3 d-flex align-items-center justify-content-center'
         >
-          <div className='img-ava-container pointer'>
+          <div className='img-ava-container'>
             <Image src='profile.jpg' className='img-ava' />
           </div>
         </Col>
@@ -72,6 +79,22 @@ const Me = forwardRef<HTMLDivElement, { me: About }>(({ me }, ref) => {
             {showHi && <span className='ps-2'>👋</span>}
           </h2>
           {parse(me.introduction)}
+          <div className='d-flex justify-content-start align-items-start'>
+            {me.profiles.map((p) => (
+              <a
+                title={p.title}
+                target='_blank'
+                href={p.link}
+                className='pointer social-link'
+              >
+                <Icon
+                  icon={profileIcons[p.type]}
+                  fontSize={26}
+                  className='pe-3'
+                />
+              </a>
+            ))}
+          </div>
         </Col>
       </Row>
     </Container>
