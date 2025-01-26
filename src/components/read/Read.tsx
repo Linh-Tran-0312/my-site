@@ -8,7 +8,7 @@ const arr = [
     title: 'React Anti-Patterns',
     author: 'Juntao Qiu',
     width: '88%',
-    height: '20%',
+    height: '25%',
     margin: '40px',
   },
   {
@@ -16,7 +16,7 @@ const arr = [
     title: 'Designing Data-Intensive Applications',
     author: 'Martin Kleppmann',
     width: '94%',
-    height: '20%',
+    height: '25%',
     margin: '25px',
   },
 
@@ -50,8 +50,8 @@ const Read = forwardRef<HTMLDivElement>((_props, ref) => {
   return (
     <SectionWrapper title='📚 What I Read' ref={ref}>
       <Row className='py-2 mt-4'>
-        <Col lg={6} md={12} xs={12}>
-          <div className='p-5 book-background h-100'>
+        <Col lg={6} md={12} xs={12} className='mb-4'>
+          <div className='p-4 book-background h-100'>
             <div className='w-100 h-100 p-4'>
               <h4>
                 Reading books is still a gorgeous way to explore the world and
@@ -68,15 +68,15 @@ const Read = forwardRef<HTMLDivElement>((_props, ref) => {
           lg={6}
           md={12}
           xs={12}
-          className='d-flex flex-column align-items-center book-stack-container'
+          className='d-flex flex-column align-items-center book-stack-container mb-4'
         >
           <div
             style={{ width: '90%' }}
-            className='h-100 d-flex flex-column align-items-center mt-4'
+            className='h-100 d-flex flex-column align-items-center'
           >
-            {arr.map((b) => (
+            {arr.map((b, i) => (
               <div
-                className='pointer book rounded d-flex justify-content-between align-items-center px-3 mt-2'
+                className={`pointer book rounded d-flex justify-content-between align-items-center px-3 ${i !== 0 ? 'mt-2' : ''}`}
                 style={{
                   height: b.height,
                   width: b.width,

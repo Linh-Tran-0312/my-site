@@ -10,7 +10,6 @@ export type CardProps = {
 };
 
 export const CustomCard = (props: CardProps) => {
-  console.log(props);
   return (
     <div className='custom-card'>
       <div className='custom-card__content'>
