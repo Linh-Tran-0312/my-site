@@ -64,11 +64,19 @@
   ],
   "blogs": [
     {
+      "id": 3,
+      "category": "How to",
+      "title": "How to use Zustand in your React projects",
+      "description": "Zustand has recently emerged as a rising star in the world of state management tools, known for its simplicity and scalibilty.",
+      "thumbnail": "./blog/zustand.png",
+      "link": "https://linhnote.hashnode.dev/how-to-use-zustand-in-your-react-projects"
+    },
+    {
       "id": 1,
       "category": "How to",
       "title": "How to create and publish an NPM package",
       "description": "When working with Node.js and its ecosystem, we usually use third-party libraries that help us to handle complicated logic, which speeds up the development process.",
-      "thumbnail": "./blog/npm.png",
+      "thumbnail": "./blog/npm.jpg",
       "link": "https://linhnote.hashnode.dev/how-to-create-and-publish-an-npm-package"
     },
     {
@@ -79,14 +87,7 @@
       "thumbnail": "./blog/ts_type_manipulation.png",
       "link": "https://linhnote.hashnode.dev/exploring-the-power-of-type-systems-in-typescript-with-type-manipulation"
     },
-    {
-      "id": 3,
-      "category": "Book Review",
-      "title": "Review Design for Developers book",
-      "description": "Today’s book is a fantastic resource, beautifully written and illustrated by By Adrian Twarog & George Moller, titled “Design for Developers“.",
-      "thumbnail": "./blog/design_for_developer.png",
-      "link": "https://linhnote.hashnode.dev/how-to-create-and-publish-an-npm-package"
-    },
+
     {
       "id": 4,
       "category": "JavaScript",
@@ -101,8 +102,45 @@
       "period": "Feb 2022 - Sep 2024",
       "position": "Software Engineer",
       "company": "SalesHood",
-      "description": "<p>SalesHood is a SaaS platform that enables businesses by delivering highly personalized selling, coaching and training experiences.</p><p>Participating in product development using the Agile/Scrum methodology. Working with product managers and designers to define software solutions that will satisfy customers’ needs.</p><p>Key responsibilities include implementing features, optimizing feature performance, ensuring product quality by implementing robust unit and end-to-end tests.</p>",
-      "myrole": "<p>Having hands-on experience: Micro frontend, React, React Context, Redux for state management, React Query for data fetching, Ant Design for UI components, Figma for design, Vite for bundling, Jest with Testing Library for unit testing and Playwright  for end to end testing.</p>"
+      "description": "<p>SalesHood is a SaaS platform that enables businesses by delivering highly personalized selling, coaching and training experiences.</p><p>Participating in product development using the Agile/Scrum methodology. Working with product managers and designers to define software solutions that will satisfy customers’ needs.</p><p>Key responsibilities in Client Sites team include implementing features, optimizing feature performance, ensuring product quality by implementing robust unit and end-to-end tests.</p>"
+    }
+  ],
+  "books": [
+    {
+      "color": "#A6C8E0",
+      "title": "React Anti-Patterns",
+      "author": "Juntao Qiu",
+      "link": "https://linhnote.hashnode.dev/review-of-react-anti-patterns-by-juntao-qiu",
+      "width": "86%",
+      "height": "25%",
+      "margin": "40px"
+    },
+    {
+      "color": "#A6D8C3",
+      "title": "The Art of Micro Frontends",
+      "author": "Florian Rappl",
+      "link": "https://linhnote.hashnode.dev/review-of-the-art-of-micro-frontends-by-florian-rappl",
+      "width": "96%",
+      "height": "24%",
+      "margin": "0px"
+    },
+    {
+      "color": "#E1AFD1",
+      "title": "Design for Developers",
+      "author": "Adrian Twarog & George Moller",
+      "link": "https://linhnote.hashnode.dev/review-of-design-for-developers-by-by-adrian-twarog-george-moller",
+      "width": "90%",
+      "height": "22%",
+      "margin": "20px"
+    },
+    {
+      "color": "#8b8d61",
+      "title": "Clean Code Cookbook",
+      "author": "Maximiliano Contieri",
+      "link": "https://linhnote.hashnode.dev/review-of-clean-code-cookbook-by-maximiliano-contieri",
+      "width": "100%",
+      "height": "25%",
+      "margin": "5px"
     }
   ],
   "study" : {

@@ -7,7 +7,7 @@ import LoadingScreen from './components/loading/Loading';
 import Welcome from './components/loading/Welcome';
 import Me, { About } from './components/me/Me';
 import NavBar, { Nav, NavItemType } from './components/nav/Nav';
-import Read from './components/read/Read';
+import Read, { Book } from './components/read/Read';
 import { CardProps } from './components/share/custom-card/CustomCard';
 import Study, { StudyProps } from './components/study/Study';
 import Work, { Experience } from './components/work/Work';
@@ -20,6 +20,7 @@ type Data = {
   blogs: CardProps[];
   experience: Experience[];
   study: StudyProps;
+  books: Book[];
 };
 const getData = async (path: string) => {
   const data = await fetch(path);
@@ -102,7 +103,7 @@ const App = () => {
         <Work ref={combinedRef('work')} experience={data.experience} />
         <Code ref={combinedRef('code')} projects={data.projects} />
         <Write ref={combinedRef('write')} blogs={data.blogs} />
-        <Read ref={combinedRef('read')} />
+        <Read ref={combinedRef('read')} books={data.books} />
         <Study ref={combinedRef('study')} study={data.study} />
         <div
           style={{ height: 100 }}

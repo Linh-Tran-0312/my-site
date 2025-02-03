@@ -2,51 +2,17 @@ import { forwardRef } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import SectionWrapper from '../share/SectionWrapper';
 import './Read.css';
-const arr = [
-  {
-    color: '#A6C8E0',
-    title: 'React Anti-Patterns',
-    author: 'Juntao Qiu',
-    width: '88%',
-    height: '25%',
-    margin: '40px',
-  },
-  {
-    color: '#C3A6C8',
-    title: 'Designing Data-Intensive Applications',
-    author: 'Martin Kleppmann',
-    width: '94%',
-    height: '25%',
-    margin: '25px',
-  },
+export type Book = {
+  color: string;
+  title: string;
+  author: string;
+  link: string;
+  width: string;
+  height: string;
+  margin: string;
+};
 
-  {
-    color: '#A6D8C3',
-    title: 'The Art of Micro Frontends',
-    author: 'Florian Rappl',
-    width: '96%',
-    height: '22%',
-    margin: '1px',
-  },
-  {
-    color: '#C3E4F7',
-    title: 'Design for Developers',
-    author: 'Adrian Twarog & George Moller',
-    width: '90%',
-    height: '22%',
-    margin: '20px',
-  },
-  {
-    color: '#8b8d61',
-    title: 'Clean Code Cookbook',
-    author: 'Maximiliano Contieri',
-    width: '100%',
-    height: '23%',
-    margin: '5px',
-  },
-];
-
-const Read = forwardRef<HTMLDivElement>((_props, ref) => {
+const Read = forwardRef<HTMLDivElement, { books: Book[] }>(({ books }, ref) => {
   return (
     <SectionWrapper title='📚 What I Read' ref={ref}>
       <Row className='py-2 mt-4'>
@@ -74,8 +40,10 @@ const Read = forwardRef<HTMLDivElement>((_props, ref) => {
             style={{ width: '90%' }}
             className='h-100 d-flex flex-column align-items-center'
           >
-            {arr.map((b, i) => (
-              <div
+            {books.map((b, i) => (
+              <a
+                href={b.link}
+                target='_blank'
                 className={`pointer book rounded d-flex justify-content-between align-items-center px-3 ${i !== 0 ? 'mt-2' : ''}`}
                 style={{
                   height: b.height,
@@ -83,10 +51,12 @@ const Read = forwardRef<HTMLDivElement>((_props, ref) => {
                   backgroundColor: b.color,
                   marginRight: b.margin,
                 }}
+                title='View review of this book'
+                referrerPolicy='no-referrer'
               >
                 <span className='book__title'>{b.title}</span>
                 <i>{b.author}</i>
-              </div>
+              </a>
             ))}
           </div>
         </Col>

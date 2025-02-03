@@ -5,13 +5,16 @@
 .book__title {
    font-size: 1.194rem;;
 }
+.book {
+   color: black
+}
 .book:hover {
    background-color: black !important ;
    color: white;
 }
 .book-background {
    background: url('/book-bg.avif');
-    background-size:cover;
+   background-size:cover;
 }
 .book-background > div {
     color: white;

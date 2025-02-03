@@ -65,7 +65,8 @@ body::-webkit-scrollbar {
   }
 }
 .bg-default {
-  background-color: var(--color-background)
+  background-color: var(--color-background) !important; 
+
 }
 .bg-white {
   background-color: #ffffff;
@@ -79,7 +80,7 @@ body::-webkit-scrollbar {
 }
 
 .text-default {
-  color: var(--color-text);
+  color: var(--color-text) !important;
 }
 .text-primary {
   color: #9dceff !important

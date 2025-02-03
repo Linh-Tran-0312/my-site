@@ -1,7 +1,7 @@
 import parse from 'html-react-parser';
 import { forwardRef } from 'react';
 import SectionWrapper from '../share/SectionWrapper';
-import Hexagon from './Hexagon';
+import Hexagon from './saleshood/Hexagon';
 import { Col, Row } from 'react-bootstrap';
 import './Work.css';
 export type Experience = {

@@ -1,0 +1,8 @@
+{
+    "id": 4,
+    "category": "TypeScript",
+    "title": "[Part 1] What the tsconfig.json! - Top-level options you should know about",
+    "description": "As you may know, the tsconfig.json in the root of a project directory allows developers to customize the TypeScript compiler settings beyond the default configuration..",
+    "thumbnail": "./blog/ts_tsconfig.png",
+    "link": "https://linhnote.hashnode.dev/part-1-what-the-tsconfigjson-top-level-options-you-should-know-about"
+  }
