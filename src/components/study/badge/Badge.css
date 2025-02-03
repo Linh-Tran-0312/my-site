@@ -46,7 +46,7 @@
   }
 
 .badge__link {
-    color: #000000;
+    color: var(--color-text-default);
 }
 
  
