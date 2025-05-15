@@ -12,6 +12,7 @@ import { CardProps } from './components/share/custom-card/CustomCard';
 import Study, { StudyProps } from './components/study/Study';
 import Work, { Experience } from './components/work/Work';
 import Write from './components/write/Write';
+import AiAssistant from './components/ai-assistant/AiAssistant';
 
 type Data = {
   about: About;
@@ -86,7 +87,7 @@ const App = () => {
   return (
     <>
       <Welcome />
-      <div>
+      <div className='position-relative'>
         <NavBar
           nav={data.nav}
           inView={{
@@ -105,6 +106,7 @@ const App = () => {
         <Write ref={combinedRef('write')} blogs={data.blogs} />
         <Read ref={combinedRef('read')} books={data.books} />
         <Study ref={combinedRef('study')} study={data.study} />
+
         <div
           style={{ height: 100 }}
           className='d-flex justify-content-center flex-column align-items-center border'
@@ -114,6 +116,7 @@ const App = () => {
             <small> Created by 💚 Linh Tran</small>
           </span>
         </div>
+        <AiAssistant />
       </div>
     </>
   );

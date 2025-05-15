@@ -1,0 +1,45 @@
+.assistant-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.chat-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px;
+    right: 40px;
+    bottom: 90px;
+    background-color: rgba(255,255,255,0.9);
+    padding: 12px 16px;
+    border-radius: 12px;
+ 
+  }
+
+  .chat-container::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-width: 10px 6px 0 6px;
+    border-style: solid;
+    border-color: #f1f0f0 transparent transparent transparent;
+  }
+.yes-button {
+    background-color: #9dceff !important;
+}
+.active-chat {
+    right: 20px;
+    bottom: 20px;
+    
+}
+.active-chat.chat-container::after {
+    all: unset
+  }
+  .cat-active-chat {
+    position: absolute;
+    top: -60px
+  }

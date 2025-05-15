@@ -85,45 +85,47 @@ function SalesHood() {
       <div className='w-100 hex-container' onClick={handleClick}>
         <div className='hex-wrap'>
           <div
-            id={keys.clientSite}
+            id={keys.myRole}
+            title={data[keys.myRole].tooltip}
             className='hex bg-white-1 text-blue-1 pointer'
-            title={data[keys.clientSite].tooltip}
           >
-            Client Sites
+            My Role
           </div>
-          <div className='hex' title='Company logo'>
-            <img src='./work/shlogo.png' width={'100%'} />
+
+          <div className='hex pointer' title='Visit Official Website'>
+            <img src='./work/moatable.jpeg' width={'100%'} />
           </div>
           <div
             id={keys.tech}
             title={data[keys.tech].tooltip}
             className='hex bg-blue-1 text-white pointer'
           >
-            Tech Stacks
+            Billing System
           </div>
+
           <div
-            id={keys.myRole}
-            title={data[keys.myRole].tooltip}
-            className='hex bg-blue-2 text-white pointer'
+            id={keys.clientSite}
+            className='hex bg-blue-4 text-white pointer'
+            title={data[keys.clientSite].tooltip}
           >
-            My Role
+            LoftyWork
           </div>
         </div>
         <div className='hex-wrap'>
           <div
-            id={keys.saleshood}
-            title={data[keys.saleshood].tooltip}
-            className='hex bg-blue-1 text-white pointer'
+            id={keys.product}
+            title={data[keys.product].tooltip}
+            className='hex bg-blue-3 text-white pointer'
           >
-            SalesHood
+            Moatable
           </div>
           <div className='hex hex-empty'></div>
           <div
             id={keys.product}
             title={data[keys.product].tooltip}
-            className='hex bg-green-1 text-white pointer'
+            className='hex bg-white-1 text-blue-1 pointer'
           >
-            Product
+            Payment SDK
           </div>
           <div className='hex hex-empty'></div>
         </div>

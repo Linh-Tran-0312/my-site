@@ -99,6 +99,12 @@
   ],
   "experience": [
     {
+      "period": "Feb 2025 - Now",
+      "position": "Frontend Engineer",
+      "company": "Moatable",
+      "description": "<p>Moatable, Inc. (MTBL) delivers innovative SaaS solutions through its Lofty and Trucker Path platforms, serving logistics and enterprise sectors.</p><p>Participating in product development of Lofy's ecosystem including LoftyWork and Billing System platforms.</p><p>Key responsibilities on the Lofty team include creating technical documentation, designing architecture, implementing features, and optimizing performance.</p>"
+    },
+    {
       "period": "Feb 2022 - Sep 2024",
       "position": "Software Engineer",
       "company": "SalesHood",
@@ -170,6 +176,18 @@
         {
           "title": "Agile",
           "subtitle": "Agile Scrum Foundation",
+          "logo": "./study/simple-logo.png",
+          "link": "study/agile.jpg"
+        },
+        {
+          "title": "AI",
+          "subtitle": "Supervised Machine Learning",
+          "logo": "./study/simple-logo.png",
+          "link": "study/agile.jpg"
+        },
+        {
+          "title": "Security",
+          "subtitle": "Web application security",
           "logo": "./study/simple-logo.png",
           "link": "study/agile.jpg"
         }
