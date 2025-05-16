@@ -147,6 +147,33 @@
       "width": "100%",
       "height": "25%",
       "margin": "5px"
+    },
+    {
+      "color": "#A6D8C3",
+      "title": "High Performance Browser Networking",
+      "author": "Ilya Grigorik",
+      "link": "https://linhnote.hashnode.dev/review-of-the-art-of-micro-frontends-by-florian-rappl",
+      "width": "96%",
+      "height": "24%",
+      "margin": "0px"
+    },
+    {
+      "color": "#129990",
+      "title": "Hacking MySQL",
+      "author": "Lukas Vileikis",
+      "link": "https://linhnote.hashnode.dev/review-of-react-anti-patterns-by-juntao-qiu",
+      "width": "86%",
+      "height": "25%",
+      "margin": "40px"
+    },
+    {
+      "color": "#94B4C1",
+      "title": "AI Engineering",
+      "author": "Chip Huyen",
+      "link": "https://linhnote.hashnode.dev/review-of-react-anti-patterns-by-juntao-qiu",
+      "width": "86%",
+      "height": "25%",
+      "margin": "40px"
     }
   ],
   "study" : {
