@@ -17,16 +17,19 @@ const Read = forwardRef<HTMLDivElement, { books: Book[] }>(({ books }, ref) => {
     <SectionWrapper title='📚 What I Read' ref={ref}>
       <Row className='py-2 mt-4'>
         <Col lg={6} md={12} xs={12} className='mb-4'>
-          <div className='p-4 book-background h-100'>
-            <div className='w-100 h-100 p-4'>
-              <h4>
-                Reading books is still a gorgeous way to explore the world and
+          <div className='book-background h-100'>
+            <div className='w-100 h-100 px-5 d-flex align-items-center'>
+              <div>
+              <h5>
+                Reading books is still a gorgeous way 
+               <br/>to explore the world and
                 the IT field is no exception.
-              </h4>
-              <p>
+              </h5>
+              <p className='text-secondary'>
                 Reviews of the recent books I have read and the interesting
-                things I learned from them.
+                things <br/> I learned from them.
               </p>
+              </div>
             </div>
           </div>
         </Col>
@@ -38,24 +41,23 @@ const Read = forwardRef<HTMLDivElement, { books: Book[] }>(({ books }, ref) => {
         >
           <div
             style={{ width: '90%' }}
-            className='h-100 d-flex flex-column align-items-center'
+            className='h-100 d-flex  align-items-end'
           >
             {books.map((b, i) => (
               <a
                 href={b.link}
                 target='_blank'
-                className={`pointer book rounded d-flex justify-content-between align-items-center px-3 ${i !== 0 ? 'mt-2' : ''}`}
+                className={`pointer book rounded d-flex  px-1 ${i !== 0 ? 'mt-2' : ''}`}
                 style={{
-                  height: b.height,
-                  width: b.width,
+                  height: 400 - Math.floor(Math.random() * 20),
                   backgroundColor: b.color,
-                  marginRight: b.margin,
                 }}
-                title='View review of this book'
+                title={`View review of ${b.title}`}
                 referrerPolicy='no-referrer'
+                key={b.title}
               >
-                <span className='book__title'>{b.title}</span>
-                <i>{b.author}</i>
+                <span className='book--title'>{b.title}</span>
+                <i className='book--author'>{b.author}</i>
               </a>
             ))}
           </div>

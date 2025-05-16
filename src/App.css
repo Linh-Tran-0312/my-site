@@ -94,7 +94,9 @@ body::-webkit-scrollbar {
 .text-link {
   color: #1261D9;
 }
-
+.text-chat {
+  color: #356D9B;
+}
 .section-title {
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
