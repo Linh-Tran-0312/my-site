@@ -3,10 +3,19 @@
     bottom: 20px;
     right: 20px;
 }
-.chat-container {
+ 
+.ai-star-icon {
+  position: relative;
+  left: 35px;
+  top: -35px;
+ 
+}
+ 
+.ai-greeting-container {
     position: fixed;
     display: flex;
     flex-direction: column;
+    width: calc(100% - 160px);
     max-width: 400px;
     margin: 20px;
     right: 40px;
@@ -14,32 +23,41 @@
     background-color: rgba(255,255,255,0.9);
     padding: 12px 16px;
     border-radius: 12px;
- 
-  }
+}
+.ai-greeting-container::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-width: 10px 8px 0 10px;
+  border-style: solid;
+  border-color: #f1f0f0 transparent transparent transparent;
+}
 
-  .chat-container::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
+.ai-chat-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 160px);
+    height: calc(100% - 180px);
+    max-width: 400px;
+    margin: 20px;
     right: 10px;
-    width: 0;
-    height: 0;
-    border-width: 10px 6px 0 6px;
-    border-style: solid;
-    border-color: #f1f0f0 transparent transparent transparent;
+    bottom: 10px;
+    background-color: rgba(255,255,255,0.9);
+    padding: 12px 16px;
+    border-radius: 12px;
   }
+.ai-chat-cat {
+  position: absolute;
+  top: -60px;
+
+}
+
 .yes-button {
     background-color: #9dceff !important;
 }
-.active-chat {
-    right: 20px;
-    bottom: 20px;
-    
-}
-.active-chat.chat-container::after {
-    all: unset
-  }
-  .cat-active-chat {
-    position: absolute;
-    top: -60px
-  }
+ 
