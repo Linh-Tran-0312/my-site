@@ -8,9 +8,9 @@ export type BadgeProps = {
 
 function Badge({ title, subtitle, logo, link }: BadgeProps) {
   return (
-    <div className='badge__container' data-ribbon={title}>
+    <div className='badge__container' data-ribbon={title.padStart(10, ' ')}>
       <div className='mt-3 ps-3'>
-        <img src={logo} width='50px' height='auto' className='mb-1' />
+        <img src={logo} width='50px'/>
       </div>
       <div>
         <a
@@ -18,7 +18,7 @@ function Badge({ title, subtitle, logo, link }: BadgeProps) {
           target='_blank'
           className='badge__link'
         >
-          <span title='View this certification' className='pointer'>
+          <span title='View this certification' className='pointer badge__title'>
             {subtitle}
           </span>
         </a>

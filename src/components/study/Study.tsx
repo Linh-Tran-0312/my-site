@@ -20,10 +20,10 @@ const Study = forwardRef<HTMLDivElement, { study: StudyProps }>(
     return (
       <SectionWrapper title='🎓 What I Study' ref={ref}>
         <Row className='py-2 mt-4'>
-          <Col sm={6} xs={12} className='mb-4'>
+          <Col sm={4} xs={12} className='mb-4'>
             <h4>{study.education.title}</h4>
             <Row className='mt-4'>
-              <Col xs={2}>
+              {/* <Col xs={2}>
                 <img
                   alt='HCMUS logo'
                   src={
@@ -31,15 +31,14 @@ const Study = forwardRef<HTMLDivElement, { study: StudyProps }>(
                   }
                   width={'100%'}
                 />
-              </Col>
+              </Col> */}
               <Col xs={10}>
-                {study.education.details.map((detail) => (
-                  <p key={detail}>{parseHtml(detail)}</p>
-                ))}
+               <p><strong>University of Science - VNUHCM.</strong></p> 
+                <p className='text-secondary'>Bachelor's degree of Information Technology.</p>
               </Col>
             </Row>
           </Col>
-          <Col sm={6} xs={12}>
+          <Col sm={8} xs={12}>
             <h4>{study.certificates.title}</h4>
             <div className='d-flex-inline '>
               {study.certificates.details.map((i) => (
