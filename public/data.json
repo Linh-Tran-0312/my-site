@@ -119,7 +119,7 @@
       "link": "https://linhnote.hashnode.dev/review-of-react-anti-patterns-by-juntao-qiu",
       "width": "86%",
       "height": "25%",
-      "margin": "40px"
+      "margin": 20
     },
     {
       "color": "#A6D8C3",
@@ -128,7 +128,7 @@
       "link": "https://linhnote.hashnode.dev/review-of-the-art-of-micro-frontends-by-florian-rappl",
       "width": "96%",
       "height": "24%",
-      "margin": "0px"
+      "margin": 30
     },
     {
       "color": "#E1AFD1",
@@ -137,7 +137,7 @@
       "link": "https://linhnote.hashnode.dev/review-of-design-for-developers-by-by-adrian-twarog-george-moller",
       "width": "90%",
       "height": "22%",
-      "margin": "20px"
+      "margin": 20
     },
     {
       "color": "#8b8d61",
@@ -146,7 +146,7 @@
       "link": "https://linhnote.hashnode.dev/review-of-clean-code-cookbook-by-maximiliano-contieri",
       "width": "100%",
       "height": "25%",
-      "margin": "5px"
+      "margin": 0
     },
     {
       "color": "#A6D8C3",
@@ -155,7 +155,7 @@
       "link": "https://linhnote.hashnode.dev/review-of-the-art-of-micro-frontends-by-florian-rappl",
       "width": "96%",
       "height": "24%",
-      "margin": "0px"
+      "margin": 10
     },
     {
       "color": "#129990",
@@ -164,7 +164,7 @@
       "link": "https://linhnote.hashnode.dev/review-of-react-anti-patterns-by-juntao-qiu",
       "width": "86%",
       "height": "25%",
-      "margin": "40px"
+      "margin": 30
     },
     {
       "color": "#94B4C1",
@@ -173,7 +173,7 @@
       "link": "https://linhnote.hashnode.dev/review-of-react-anti-patterns-by-juntao-qiu",
       "width": "86%",
       "height": "25%",
-      "margin": "40px"
+      "margin": 40
     }
   ],
   "study" : {
@@ -181,12 +181,11 @@
       "title": "Education",
       "details": [
         "<strong>University of Science - VNUHCM.</strong>",
-        "Bachelor's degree of Information Technology <br/>(Second Degree).",
-        "2019 - 2022"
+        "Bachelor's degree of Information Technology <br/>(Second Degree)."
       ]
     },
     "certificates": {
-      "title": "Certifications",
+      "title": "Courses",
       "details": [
         {
           "title": "English",
@@ -207,16 +206,16 @@
           "link": "study/agile.jpg"
         },
         {
-          "title": "AI",
-          "subtitle": "Supervised Machine Learning",
-          "logo": "./study/simple-logo.png",
+          "title": "Security",
+          "subtitle": "Application Security",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Coursera_logo_%282020%29.svg/2560px-Coursera_logo_%282020%29.svg.png",
           "link": "study/agile.jpg"
         },
         {
-          "title": "Security",
-          "subtitle": "Web application security",
-          "logo": "./study/simple-logo.png",
-          "link": "study/agile.jpg"
+          "title": "AI",
+          "subtitle": "Supervised Machine Learning",
+          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZnxfo58TJV8tIfREI-pRpi-rfeoc5PQrb5g&s",
+          "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSatxvqYJ1INtylvAkzUpYzXn5T1TXDXShIQ&s"
         }
       ]
       
