@@ -75,7 +75,7 @@ const ChatBox: React.FC = ({ setMode }) => {
          <InputGroup className='flex-grow-1'>
           <FormControl
             type='text'
-            placeholder='Type a message...'
+            placeholder='Say something hooman...'
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />

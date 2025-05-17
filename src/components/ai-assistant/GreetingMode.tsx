@@ -12,10 +12,10 @@ function GreetingMode({ setMode, setGreeted }) {
         Hello! My name's Sâu (it's pronounced like "Soul"),
         <p>
           I'm a cute cat and an AI assistant, trained on the GPT-4 model by my
-          boss Linh
+          owner, Linh.
         </p>
         <p>
-          Would you like to talk with me? You can ask me anything about my boss
+          Would you like to talk with me? You can ask me anything about my owner
           or my capabilities.
         </p>
       </div>
