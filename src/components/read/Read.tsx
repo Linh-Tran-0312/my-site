@@ -9,7 +9,7 @@ export type Book = {
   link: string;
   width: string;
   height: string;
-  margin: string;
+  margin: number;
 };
 
 const Read = forwardRef<HTMLDivElement, { books: Book[] }>(({ books }, ref) => {
@@ -49,15 +49,15 @@ const Read = forwardRef<HTMLDivElement, { books: Book[] }>(({ books }, ref) => {
                 target='_blank'
                 className={`pointer book rounded d-flex  px-1 ${i !== 0 ? 'mt-2' : ''}`}
                 style={{
-                  height: 400 - Math.floor(Math.random() * 20),
+                  height: 400 - b.margin,
                   backgroundColor: b.color,
                 }}
                 title={`View review of ${b.title}`}
                 referrerPolicy='no-referrer'
                 key={b.title}
               >
-                <span className='book--title'>{b.title}</span>
-                <i className='book--author'>{b.author}</i>
+                <span className='book__title'>{b.title}</span>
+                <i className='book__author'>{b.author}</i>
               </a>
             ))}
           </div>
