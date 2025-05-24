@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import ChatBox from './ChatMode';
+import { useState } from 'react';
 import './AiAssistant.css';
-import { Button } from 'react-bootstrap';
 import Cat from './Cat';
+import ChatBox from './ChatMode';
 import GreetingMode from './GreetingMode';
 import { MODE } from './constant';
 
@@ -41,9 +40,13 @@ function AiAssistant() {
           className='assistant-button pointer'
           onClick={handleClick}
           title='Cuddle me'
-          role="button"
+          role='button'
         >
-          <img width={30} src='chat/star.png' className={mode === MODE.SLEEPING ?  'ai-star-icon' : 'd-none'}/>
+          <img
+            width={30}
+            src='chat/star.png'
+            className={mode === MODE.SLEEPING ? 'ai-star-icon' : 'd-none'}
+          />
           <Cat width={70} src={verCatSrc} />
         </div>
       ) : null}

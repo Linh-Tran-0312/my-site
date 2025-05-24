@@ -20,15 +20,15 @@ const Read = forwardRef<HTMLDivElement, { books: Book[] }>(({ books }, ref) => {
           <div className='book-background h-100'>
             <div className='w-100 h-100 px-5 d-flex align-items-center'>
               <div>
-              <h5>
-                Reading books is still a gorgeous way 
-               <br/>to explore the world and
-                the IT field is no exception.
-              </h5>
-              <p className='text-secondary'>
-                Reviews of the recent books I have read and the interesting
-                things <br/> I learned from them.
-              </p>
+                <h5>
+                  Reading books is still a gorgeous way
+                  <br />
+                  to explore the world and the IT field is no exception.
+                </h5>
+                <p className='text-secondary'>
+                  Reviews of the recent books I have read and the interesting
+                  things <br /> I learned from them.
+                </p>
               </div>
             </div>
           </div>
