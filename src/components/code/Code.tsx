@@ -35,19 +35,22 @@ const Code = forwardRef<HTMLDivElement, { projects: CardProps[] }>(
                     <div className='bg-white-blur p-4 h-100'>
                       <h5> My Skills</h5>
                       <p>
-                        <strong> Programming languages</strong>:
-                        JavaScript/TypeScript, HTML, CSS, C#, Ruby
+                        <strong> Programming languages</strong>: HTML, CSS, 
+                        JavaScript/TypeScript, Python, Ruby
                       </p>
                       <p>
                         <strong>Backend</strong>: NodeJS, Express, SQL
                       </p>
                       <p>
                         <strong>Frontend</strong>: React, Redux, React Query,
-                        Ant Design, Vite bundler, Jest, Testing Library
+                        Ant Design, MUI, Webpack, Vite bundler, Jest, Testing Library
+                      </p>
+                      <p>
+                        <strong>AI</strong>: OpenAI API, LangChain, LLMs, HuggingFace
                       </p>
                       <p>
                         <strong>Others</strong>: Linux OS, Docker, Git version
-                        control, CI/CD with Github Action
+                        control, CI/CD with Github Action and Gitlab
                       </p>
                     </div>
                   </Col>

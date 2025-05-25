@@ -113,19 +113,19 @@ function SalesHood() {
             Tech Stack
           </div>
 
-          {/* <div className='hex hex-empty'></div> */}
-          <div
+          <div className='hex hex-empty'></div>
+          {/* <div
             id={keys.product}
             title={data[keys.product].tooltip}
             className='hex bg-green-1 text-white pointer'
           >
             Product
-          </div>
+          </div> */}
           {/* <div className='hex hex-empty'></div> */}
           <div
             id={keys.saleshood}
             title={data[keys.saleshood].tooltip}
-            className='hex bg-blue-1 text-white pointer'
+            className='hex bg-green-1 text-white pointer'
           >
             SalesHood
           </div>

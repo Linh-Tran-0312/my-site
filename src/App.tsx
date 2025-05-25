@@ -111,7 +111,7 @@ const App = () => {
           style={{ height: 100 }}
           className='d-flex justify-content-center flex-column align-items-center border'
         >
-          <span>Thanks for visiting my site</span>
+          <span className='text-secondary'>Thanks for visiting my site!</span>
           <span className='text-secondary'>
             <small> Created by 💚 Linh Tran</small>
           </span>

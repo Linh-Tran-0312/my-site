@@ -25,21 +25,22 @@ const Study = forwardRef<HTMLDivElement, { study: StudyProps }>(
       const handleResize = () => {
         if (ribbonRef.current) {
           const rect = ribbonRef.current.getBoundingClientRect();
-          console.log('Ribbon width:', rect.width);
           const reachMinWidth = rect.width < MIN_WIDTH;
           setShowLogo(!reachMinWidth);
         }
       };
 
       window.addEventListener('resize', handleResize);
+      handleResize();
       return () => {
         window.removeEventListener('resize', handleResize);
       };
     }, []);
     return (
       <SectionWrapper title='🎓 What I Study' ref={ref}>
-        <Row className='py-2 mt-2' gap={12}>
+        <Row className='py-2 mt-4' gap={12}>
           <Col lg={4} md={12} className='mb-4 pe-4'>
+          <h5>Education</h5>
             <Row className='mt-42'>
               <Col xs={12}>
                 <div className='ribbon' ref={ribbonRef}>
@@ -68,6 +69,7 @@ const Study = forwardRef<HTMLDivElement, { study: StudyProps }>(
             </Row>
           </Col>
           <Col lg={8} md={12}>
+          <h5>Certifications</h5>
             <div className='d-flex-inline '>
               {study.certificates.details.map((i) => (
                 <Badge {...i} />
