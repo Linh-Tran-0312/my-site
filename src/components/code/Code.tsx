@@ -26,28 +26,30 @@ const Code = forwardRef<HTMLDivElement, { projects: CardProps[] }>(
             <Col lg={8} sm={12}>
               <div className='border w-100 h-100 code-background p-4'>
                 <Row className='h-100'>
-                  <Col lg={6}></Col>
+                  <Col lg={5}></Col>
                   <Col
-                    lg={6}
+                    lg={7}
                     sm={12}
                     className='d-flex justify-content-center h-100 align-items-start'
                   >
                     <div className='bg-white-blur p-4 h-100'>
                       <h5> My Skills</h5>
                       <p>
-                        <strong> Programming languages</strong>: HTML, CSS, 
-                        JavaScript/TypeScript, Python, Ruby
+                        <strong> Programming languages</strong>: HTML, CSS,
+                        JavaScript/TypeScript, Ruby
                       </p>
                       <p>
                         <strong>Backend</strong>: NodeJS, Express, SQL
                       </p>
                       <p>
                         <strong>Frontend</strong>: React, Redux, React Query,
-                        Ant Design, MUI, Webpack, Vite bundler, Jest, Testing Library
+                        Ant Design, Material UI, Webpack, Vite bundler, Jest,
+                        Testing Library
                       </p>
-                      <p>
-                        <strong>AI</strong>: OpenAI API, LangChain, LLMs, HuggingFace
-                      </p>
+                      {/* <p>
+                        <strong>AI</strong>: OpenAI API, LangChain, LLMs,
+                        HuggingFace
+                      </p> */}
                       <p>
                         <strong>Others</strong>: Linux OS, Docker, Git version
                         control, CI/CD with Github Action and Gitlab

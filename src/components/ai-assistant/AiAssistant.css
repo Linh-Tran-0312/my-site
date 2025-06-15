@@ -47,9 +47,12 @@
     margin: 20px;
     right: 10px;
     bottom: 10px;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,1);
     padding: 12px 16px;
-    border-radius: 12px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right bottom, #7cca57, #a277c5,  #7cca57, #a277c5);
   }
 .ai-chat-cat {
   position: absolute;

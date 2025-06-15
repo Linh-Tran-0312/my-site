@@ -39,9 +39,9 @@ const Study = forwardRef<HTMLDivElement, { study: StudyProps }>(
     return (
       <SectionWrapper title='🎓 What I Study' ref={ref}>
         <Row className='py-2 mt-4' gap={12}>
-          <Col lg={4} md={12} className='mb-4 pe-4'>
-          <h5>Education</h5>
-            <Row className='mt-42'>
+          <Col lg={4} md={12} className='mb-42 pe-4'>
+            <h5 className='title-border py-2'>Education</h5>
+            <Row className='mb-4'>
               <Col xs={12}>
                 <div className='ribbon' ref={ribbonRef}>
                   <div className='d-flex align-items-center p-4 w-100 h-100'>
@@ -69,10 +69,12 @@ const Study = forwardRef<HTMLDivElement, { study: StudyProps }>(
             </Row>
           </Col>
           <Col lg={8} md={12}>
-          <h5>Certifications</h5>
-            <div className='d-flex-inline '>
+            <div style={{ width: 490 }}>
+              <h5 className='title-border py-2'>Certifications</h5>
+            </div>
+            <div className='d-flex-inline mb-1 justify-content-stretch'>
               {study.certificates.details.map((i) => (
-                <Badge {...i} />
+                <Badge key={i.title} {...i} />
               ))}
             </div>
           </Col>

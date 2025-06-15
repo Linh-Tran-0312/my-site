@@ -59,6 +59,7 @@ function NavBar({ nav, inView, scrollIntoView }: Props) {
           <Nav className='me-auto text-center h6 font-bold'>
             {NavItems.map((item: NavItemType) => (
               <Nav.Link
+                key={item}
                 className='d-flex flex-column justify-content-center align-items-center nav-link'
                 onClick={() => scrollIntoView(item)}
               >
@@ -71,22 +72,6 @@ function NavBar({ nav, inView, scrollIntoView }: Props) {
                 </span>
               </Nav.Link>
             ))}
-            {/* <Nav className='d-flex flex-row justify-content-center align-items-start'>
-              <Nav.Link
-                target='_blank'
-                href='https://github.com/Linh-Tran-0312'
-                className='pointer nav__icon nav-link'
-              >
-                <Icon icon={faGithub} size='lg' />
-              </Nav.Link>
-              <Nav.Link
-                target='_blank'
-                href='https://www.linkedin.com/in/ch%C3%AD-linh-tr%E1%BA%A7n-a54928200/'
-                className='pointer nav__icon nav-link'
-              >
-                <Icon icon={faLinkedin} size='lg' />
-              </Nav.Link>
-            </Nav> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

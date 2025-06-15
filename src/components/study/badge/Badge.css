@@ -15,7 +15,15 @@
     border: 1px solid rgb(218, 216, 216);
     border-color: #dfd9d9;
     border-radius: 4px;
+    /* border-bottom: 10px solid #dfd9d9;
+    border-left: 6px solid #dfd9d9;
+    background-color: #fff; */
   }
+  /* .badge__container:hover {
+    border-bottom: 10px solid #adbdce;
+    border-left: 6px solid #adbdce;
+    border-color: #adbdce;
+  } */
   .badge__container:last-child {
     margin-right: 0;
   }
@@ -26,7 +34,7 @@
     height: 50px;
   }
   
-  .badge__container::before {
+.badge__container::before {
     content: attr(data-ribbon);
     min-width: 12ch;  
     position: absolute;
@@ -40,8 +48,6 @@
     border-bottom: 0;
     transform-origin: bottom left;
     padding: 5px 35px calc(var(--d) + 5px);
-    /* background: linear-gradient(rgba(0, 0, 0, 0.5) 0 0) bottom/100% var(--d)
-      no-repeat var(--c); */
     background-color: black;
     background-clip: padding-box;
     clip-path: polygon(0 0,100% 0,100% 100%,calc(100% - var(--d)) calc(100% - var(--d)),var(--d) calc(100% - var(--d)),0 100%);
@@ -50,7 +56,7 @@
     -webkit-mask-size: 300vmax 300vmax;
     -webkit-mask-composite: destination-in;
     mask-composite: intersect;
-  }
+  } 
 
 .badge__link {
     color: var(--color-text-default);

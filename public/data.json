@@ -102,7 +102,7 @@
       "period": "Feb 2025 - Now",
       "position": "Frontend Engineer",
       "company": "Moatable",
-      "description": "<p>Moatable, Inc. (MTBL) delivers innovative SaaS solutions through its Lofty and Trucker Path platforms, serving logistics and enterprise sectors.</p><p>Participating in product development of Lofy's ecosystem including LoftyWork and Billing System platforms.</p><p>Key responsibilities on the Lofty team include creating technical documentation, designing architecture, implementing features, and optimizing performance.</p>"
+      "description": "<p>Moatable, Inc. (MTBL) delivers innovative SaaS solutions through its Lofty and Trucker Path platforms, serving logistics and enterprise sectors.</p><p>Participating in product development of Lofy's ecosystem including LoftyWork and Billing System platforms.</p><p>Key responsibilities on the Lofty team include creating technical documentation, implementing features, and optimizing performance.</p>"
     },
     {
       "period": "Feb 2022 - Sep 2024",
@@ -152,28 +152,10 @@
       "color": "#A6D8C3",
       "title": "High Performance Browser Networking",
       "author": "Ilya Grigorik",
-      "link": "https://linhnote.hashnode.dev/review-of-the-art-of-micro-frontends-by-florian-rappl",
+      "link": "https://linhnote.hashnode.dev/review-of-high-performance-browser-networking-by-ilya-grigorik",
       "width": "96%",
       "height": "24%",
       "margin": 10
-    },
-    {
-      "color": "#129990",
-      "title": "Hacking MySQL",
-      "author": "Lukas Vileikis",
-      "link": "https://linhnote.hashnode.dev/review-of-react-anti-patterns-by-juntao-qiu",
-      "width": "86%",
-      "height": "25%",
-      "margin": 30
-    },
-    {
-      "color": "#94B4C1",
-      "title": "AI Engineering",
-      "author": "Chip Huyen",
-      "link": "https://linhnote.hashnode.dev/review-of-react-anti-patterns-by-juntao-qiu",
-      "width": "86%",
-      "height": "25%",
-      "margin": 40
     }
   ],
   "study" : {
@@ -204,18 +186,6 @@
           "subtitle": "Agile Scrum Foundation",
           "logo": "./study/simple-logo.png",
           "link": "study/agile.jpg"
-        },
-        {
-          "title": "Security",
-          "subtitle": "Application Security",
-          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Coursera_logo_%282020%29.svg/2560px-Coursera_logo_%282020%29.svg.png",
-          "link": "study/agile.jpg"
-        },
-        {
-          "title": "AI",
-          "subtitle": "Supervised Machine Learning",
-          "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZnxfo58TJV8tIfREI-pRpi-rfeoc5PQrb5g&s",
-          "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSatxvqYJ1INtylvAkzUpYzXn5T1TXDXShIQ&s"
         }
       ]
       

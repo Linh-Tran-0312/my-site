@@ -39,17 +39,14 @@ const Read = forwardRef<HTMLDivElement, { books: Book[] }>(({ books }, ref) => {
           xs={12}
           className='d-flex flex-column align-items-center book-stack-container mb-4'
         >
-          <div
-            style={{ width: '90%' }}
-            className='h-100 d-flex  align-items-end'
-          >
+          <div className='w-100 h-100 d-flex  align-items-end'>
             {books.map((b, i) => (
               <a
                 href={b.link}
                 target='_blank'
                 className={`pointer book rounded d-flex  px-1 ${i !== 0 ? 'mt-2' : ''}`}
                 style={{
-                  height: 400 - b.margin,
+                  height: 450 - b.margin,
                   backgroundColor: b.color,
                 }}
                 title={`View review of ${b.title}`}

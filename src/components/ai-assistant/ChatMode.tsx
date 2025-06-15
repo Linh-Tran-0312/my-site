@@ -9,12 +9,14 @@ import { Button, FormControl, InputGroup, ListGroup } from 'react-bootstrap';
 import Typewriter from 'typewriter-effect';
 import Cat from './Cat';
 import { MODE } from './constant';
+
 const hozCatSrc = {
   static: 'chat/static-cat-2.png',
-  // active: 'chat/active-cat-2.gif',
   active: 'chat/active-cat-2.png',
 };
-const ChatBox: React.FC = ({ setMode }) => {
+const ChatBox: React.FC<{ setMode: (mode: string) => void }> = ({
+  setMode,
+}) => {
   const [messages, setMessages] = useState<string[]>([]);
   const [input, setInput] = useState<string>('');
 
@@ -26,7 +28,7 @@ const ChatBox: React.FC = ({ setMode }) => {
   };
 
   return (
-    <div className='ai-chat-container border'>
+    <div className='ai-chat-container'>
       <div className='position-relative d-flex flex-column'>
         <div
           className='ai-chat-cat'

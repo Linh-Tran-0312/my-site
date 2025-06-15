@@ -8,7 +8,12 @@
     border: 1px solid #adbdce;
     border-radius: 4px;
     margin-top: 20px;
+     /* border-bottom: 10px solid #adbdce;
+     border-left: 8px solid #adbdce; */
   }
+.title-border {
+  border-bottom: 1px solid #000000
+}
 .text-university {
     color:#000000 !important;
     font-weight: 500;
