@@ -8,7 +8,7 @@ import './Work.css';
 export type Experience = {
   period: string;
   position: string;
-  company: string;
+  company: 'SalesHood' | 'Moatable';
   description: string;
 };
 const HexagonMap = {

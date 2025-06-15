@@ -1,7 +1,12 @@
 import { Button } from 'react-bootstrap';
 import { MODE } from './constant';
 
-function GreetingMode({ setMode, setGreeted }) {
+type GreetingModeProps = {
+  setMode: (mode: string) => void;
+  setGreeted: (greeted: boolean) => void;
+};
+
+function GreetingMode({ setMode, setGreeted }: GreetingModeProps) {
   const handleSayYes = () => {
     setMode(MODE.CHATTING);
     setGreeted(true);
