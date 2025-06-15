@@ -9,7 +9,7 @@ const data = {
     modal: {
       title: 'SalesHood | Information',
       content:
-        '<p>SalesHood was founded in May 2013 by Elay Cohen and Arthur Do. The company is based in San Francisco, California</p><p></p>',
+        '<p>SalesHood was founded in May 2013 by Elay Cohen and Arthur Do. The company is based in San Francisco, California</p><p></p><p>SalesHood platform includes these main features: </p><p><strong>Sales Content:</strong> Organize sales content in one place and measure revenue impact.</p><p><strong>Client Site-Digital Sales Rooms:</strong> Empower sellers to create Digital Sales Rooms, complete with mutual plans, and AI content recommendations</p><p><strong>Coaching:</strong> Scale pitch practice and messaging alignment with AI-powered video role-playing.</p><p><strong>Training:</strong> Create personalized Learning Paths for onboarding and ongoing training.</p>',
     },
   },
   clientSite: {
@@ -17,7 +17,7 @@ const data = {
     modal: {
       title: 'SalesHood | Client Sites',
       content:
-        '<p>Client Sites in one of the primary features in SalesHood product, which enahnces sales performance by working as digital sales rooms.</p><ul><li>Sell how buyers want to buy. </li><li>Empower your sellers to create Digital Sales Rooms, complete with mutual plans, call notes, and AI content recommendations.</li> <li>Report on which buyers are engaged and how much pipeline is influenced. </li></ul>',
+        '<p>Client Sites in one of the primary features in SalesHood product, which enhances sales performance by working as digital sales rooms.</p><ul><li>Sell how buyers want to buy. </li><li>Empower your sellers to create Digital Sales Rooms, complete with mutual plans, call notes, and AI content recommendations.</li> <li>Report on which buyers are engaged and how much pipeline is influenced. </li></ul>',
     },
   },
   tech: {
@@ -34,14 +34,6 @@ const data = {
       title: 'SalesHood | My Role',
       content:
         '<p>Focusing on Frontend development, get hands-on experience on: Typescript, React, Redux, React Query, Axios, Ant Design, Storybook, Jest, Testing Library, Playwright, Figma.</p><p>Developed and maintained Client Sites - a micro frontend project, optimized performance using code splitting, lazy loading, reducing bundle size and improving page load time.</p><p>Contribute to UI kit development.</p>',
-    },
-  },
-  product: {
-    tooltip: 'View product details',
-    modal: {
-      title: 'SalesHood | Product',
-      content:
-        "<p>SalesHood's platform includes these main features: </p><p><strong>Sales Content:</strong> Organize sales content in one place and measure revenue impact.</p><p><strong>Client Site-Digital Sales Rooms:</strong> Empower sellers to create Digital Sales Rooms, complete with mutual plans, and AI content recommendations</p><p><strong>Coaching:</strong> Scale pitch practice and messaging alignment with AI-powered video role-playing.</p><p><strong>Training:</strong> Create personalized Learning Paths for onboarding and ongoing training.</p>",
     },
   },
 };
@@ -85,47 +77,45 @@ function SalesHood() {
       <div className='w-100 hex-container' onClick={handleClick}>
         <div className='hex-wrap'>
           <div
-            id={keys.clientSite}
-            className='hex bg-white-1 text-blue-1 pointer'
-            title={data[keys.clientSite].tooltip}
-          >
-            Client Sites
-          </div>
-          <div className='hex' title='Company logo'>
-            <img src='./work/shlogo.png' width={'100%'} />
-          </div>
-          <div
-            id={keys.tech}
-            title={data[keys.tech].tooltip}
-            className='hex bg-blue-1 text-white pointer'
-          >
-            Tech Stacks
-          </div>
-          <div
             id={keys.myRole}
             title={data[keys.myRole].tooltip}
             className='hex bg-blue-2 text-white pointer'
           >
             My Role
           </div>
+          <a
+            href='https://www.saleshood.com/'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-white hex pointer'
+          >
+            <img src='./work/shlogo.png' width={'100%'} alt='SalesHood Logo' />
+          </a>
+          <div
+            id={keys.clientSite}
+            className='hex bg-white-1 text-blue-1 pointer'
+            title={data[keys.clientSite].tooltip}
+          >
+            Client Sites
+          </div>
         </div>
         <div className='hex-wrap'>
           <div
+            id={keys.tech}
+            title={data[keys.tech].tooltip}
+            className='hex bg-blue-1 text-white pointer'
+          >
+            Tech Stack
+          </div>
+
+          <div className='hex hex-empty'></div>
+          <div
             id={keys.saleshood}
             title={data[keys.saleshood].tooltip}
-            className='hex bg-blue-1 text-white pointer'
+            className='hex bg-green-1 text-white pointer'
           >
             SalesHood
           </div>
-          <div className='hex hex-empty'></div>
-          <div
-            id={keys.product}
-            title={data[keys.product].tooltip}
-            className='hex bg-green-1 text-white pointer'
-          >
-            Product
-          </div>
-          <div className='hex hex-empty'></div>
         </div>
       </div>
     </div>

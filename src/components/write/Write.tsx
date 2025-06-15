@@ -21,7 +21,7 @@ const Write = forwardRef<HTMLDivElement, { blogs: CardProps[] }>(
                   >
                     <div className='bg-white-blur p-4'>
                       <h5> Write to Reflect and Share</h5>
-                      <p>
+                      <p className='text-secondary'>
                         I started my own series,
                         <a
                           href='https://linhnote.hashnode.dev/'

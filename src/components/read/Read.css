@@ -2,19 +2,50 @@
 .book-stack-container {
    min-height: 365px;
 }
-.book__title {
-   font-size: 1.194rem;;
-}
+
 .book {
-   color: black
+   width: 100px;
+   background: #3b5998;
+   position: relative;
+   border-radius: 4px;
+   box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+   transition: transform 0.3s ease;
+   color: black;
+ }
+ 
+ .book:hover {
+   transform: translateY(-10px);
+   background-color: black !important;
+   color: white;
 }
+
+.book__title, .book__author {
+   position: absolute;
+   writing-mode: vertical-rl;
+   text-orientation: mixed;
+   color: white;
+   font-family: sans-serif;
+   text-align: center;
+   width: 100%;
+   right: calc(50% - 8px)
+ }
+ .book__title {
+   top: 10px;
+   font-size: 16px;
+   font-weight: bold;
+ }
+
+ .book__author {
+   bottom: 10px;
+   font-size: 12px;
+ }
 .book:hover {
    background-color: black !important ;
    color: white;
 }
 .book-background {
-   background: url('/book-bg.avif');
-   background-size:cover;
+   background: url('/book-bg.jpg');
+   min-height: 200px;
 }
 .book-background > div {
     color: white;

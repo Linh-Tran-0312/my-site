@@ -82,6 +82,7 @@ const Me = forwardRef<HTMLDivElement, { me: About }>(({ me }, ref) => {
           <div className='d-flex justify-content-start align-items-start'>
             {me.profiles.map((p) => (
               <a
+                key={p.title}
                 title={p.title}
                 target='_blank'
                 href={p.link}

@@ -1,0 +1,66 @@
+.assistant-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+ 
+.ai-star-icon {
+  position: relative;
+  left: 35px;
+  top: -35px;
+ 
+}
+ 
+.ai-greeting-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 160px);
+    max-width: 400px;
+    margin: 20px;
+    right: 40px;
+    bottom: 90px;
+    background-color: rgba(255,255,255,0.9);
+    padding: 12px 16px;
+    border-radius: 12px;
+}
+.ai-greeting-container::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-width: 10px 8px 0 10px;
+  border-style: solid;
+  border-color: #f1f0f0 transparent transparent transparent;
+}
+
+.ai-chat-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 160px);
+    height: calc(100% - 180px);
+    max-width: 400px;
+    margin: 20px;
+    right: 10px;
+    bottom: 10px;
+    background-color: rgba(255,255,255,1);
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right bottom, #7cca57, #a277c5,  #7cca57, #a277c5);
+  }
+.ai-chat-cat {
+  position: absolute;
+  top: -60px;
+
+}
+
+.yes-button {
+    background-color: #9dceff !important;
+}
+ 
