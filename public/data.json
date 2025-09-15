@@ -146,13 +146,31 @@
       "link": "https://linhnote.hashnode.dev/review-of-clean-code-cookbook-by-maximiliano-contieri",
       "width": "100%",
       "height": "25%",
-      "margin": 0
+      "margin": -10
     },
     {
       "color": "#A6D8C3",
       "title": "High Performance Browser Networking",
       "author": "Ilya Grigorik",
       "link": "https://linhnote.hashnode.dev/review-of-high-performance-browser-networking-by-ilya-grigorik",
+      "width": "96%",
+      "height": "24%",
+      "margin": 10
+    },
+    {
+      "color": "#CCBDA0",
+      "title": "Advanced React",
+      "author": "Nadia Makarevich",
+      "link": "https://linhnote.hashnode.dev/review-of-advanced-react-by-nadia-makarevich",
+      "width": "100%",
+      "height": "25%",
+      "margin": 0
+    },
+    {
+      "color": "#8c8f5d",
+      "title": "Web Performance Fundamentals",
+      "author": "Nadia Makarevich",
+      "link": "https://linhnote.hashnode.dev/review-of-web-performance-fundamentals-by-nadia-makarevich",
       "width": "96%",
       "height": "24%",
       "margin": 10
