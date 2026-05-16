@@ -1,0 +1,89 @@
+/* General Section */
+.study-section {
+    margin: 80px 0;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Grid Layout */
+  .study-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  
+  /* Card Styles */
+  .study-card {
+ 
+    padding: 24px;
+    padding-left: 0px;
+    padding-top: 0px;
+ 
+  }
+  
+  .study-card:hover {
+    /* box-shadow: 0 4px 16px rgba(0,0,0,0.12); */
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  
+  /* Education Block */
+  .education-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .edu-school {
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .edu-degree {
+    color: #555;
+    font-size: 14px;
+    margin: 4px 0;
+  }
+  
+  .edu-time {
+    color: #888;
+    font-size: 12px;
+    margin: 0;
+  }
+  
+  /* Certifications List */
+  .cert-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cert-list li {
+    display: flex;
+    align-items: center;
+    color: #555;
+    margin-bottom: 12px;
+    font-size: 15px;
+
+  }
+  .cert-list li:hover {
+    color: #0286F0;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .cert-list li img {
+    flex-shrink: 0;
+  }
+  .badge__link {
+    color: var(--color-text-default);
+}

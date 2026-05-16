@@ -9,7 +9,7 @@
   },
   "about": {
     "greeting": "My name's Linh",
-    "introduction": "<p>I'm an software engineer with three years of experience.</p><p>Passionate about creating engaging and innovative web-based applications.</p><p>Aiming to leverage my skills to drive impactful contributions to your organization while continuing to stay ahead in the evolving field of web development.</p><p>Contact me via ✉️ linhtran.atwork@gmail.com</p>",
+    "introduction": "<p>I'm an software engineer with 4+ years of experience.</p><p>Passionate about creating engaging and innovative web-based applications.</p><p>Aiming to leverage my skills to drive impactful contributions to your organization while continuing to stay ahead in the evolving field of web development.</p><p>Contact me via ✉️ linhtran.atwork@gmail.com</p>",
     "profiles": [
       {
         "type": "linkedin",
@@ -100,9 +100,9 @@
   "experience": [
     {
       "period": "Feb 2025 - Now",
-      "position": "Frontend Engineer",
+      "position": "Software Engineer",
       "company": "Moatable",
-      "description": "<p>Moatable, Inc. (MTBL) delivers innovative SaaS solutions through its Lofty and Trucker Path platforms, serving logistics and enterprise sectors.</p><p>Participating in product development of Lofy's ecosystem including LoftyWork and Billing System platforms.</p><p>Key responsibilities on the Lofty team include creating technical documentation, implementing features, and optimizing performance.</p>"
+      "description": "<p>Moatable, Inc. (MTBL) delivers innovative SaaS solutions through its Lofty and Trucker Path platforms, serving logistics and enterprise sectors.</p><p>Participating in product development of Lofy's ecosystem including Lofty CRM and Billing System platforms.</p><p>Key responsibilities on the Lofty team include creating technical documentation, implementing features, and optimizing performance.</p>"
     },
     {
       "period": "Feb 2022 - Sep 2024",
@@ -149,7 +149,7 @@
       "margin": -10
     },
     {
-      "color": "#A6D8C3",
+      "color": "#A2D6CC",
       "title": "High Performance Browser Networking",
       "author": "Ilya Grigorik",
       "link": "https://linhnote.hashnode.dev/review-of-high-performance-browser-networking-by-ilya-grigorik",
@@ -167,13 +167,22 @@
       "margin": 0
     },
     {
-      "color": "#8c8f5d",
+      "color": "#98A36F",
       "title": "Web Performance Fundamentals",
       "author": "Nadia Makarevich",
       "link": "https://linhnote.hashnode.dev/review-of-web-performance-fundamentals-by-nadia-makarevich",
       "width": "96%",
       "height": "24%",
       "margin": 10
+    },
+    {
+      "color": "#9CB7D3",
+      "title": "Modern Frontend Development with...",
+      "author": "Florian Rappl",
+      "link": "https://linhnote.hashnode.dev/review-of-modern-frontend-development-with-node-js-by-florian-rappl",
+      "width": "96%",
+      "height": "24%",
+      "margin": 25
     }
   ],
   "study" : {
@@ -196,14 +205,26 @@
         {
           "title": "Cloud",
           "subtitle": "Cloud Practitioner Essentials",
-          "logo": "./study/aws-logo.png",
+          "logo": "./study/aws-log-alt.png",
           "link": "study/aws.jpg"
         },
         {
           "title": "Agile",
           "subtitle": "Agile Scrum Foundation",
-          "logo": "./study/simple-logo.png",
+          "logo": "./study/scrum-agile.png",
           "link": "study/agile.jpg"
+        },
+        {
+          "title": "AI",
+          "subtitle": "Claude Code in Action",
+          "logo": "./study/anthropic-logo.jpeg",
+          "link": "study/claude-action.jpg"
+        },
+        {
+          "title": "AI",
+          "subtitle": "Introduction to agent skills",
+          "logo": "./study/anthropic-logo.jpeg",
+          "link": "study/claude-skill.jpg"
         }
       ]
       

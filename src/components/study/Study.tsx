@@ -1,8 +1,8 @@
-import { forwardRef, useLayoutEffect, useRef, useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
-import SectionWrapper from '../share/SectionWrapper';
-import './Study.css';
-import Badge, { BadgeProps } from './badge/Badge';
+import { forwardRef } from "react";
+import SectionWrapper from "../share/SectionWrapper";
+import "./Study.css";
+import { BadgeProps } from "./badge/Badge";
+import "./style.css";
 
 export type StudyProps = {
   education: {
@@ -17,68 +17,61 @@ export type StudyProps = {
 
 const Study = forwardRef<HTMLDivElement, { study: StudyProps }>(
   ({ study }: { study: StudyProps }, ref) => {
-    const ribbonRef = useRef<HTMLDivElement>(null);
-    const [showLogo, setShowLogo] = useState<boolean>(false);
-
-    useLayoutEffect(() => {
-      const MIN_WIDTH = 300;
-      const handleResize = () => {
-        if (ribbonRef.current) {
-          const rect = ribbonRef.current.getBoundingClientRect();
-          const reachMinWidth = rect.width < MIN_WIDTH;
-          setShowLogo(!reachMinWidth);
-        }
-      };
-
-      window.addEventListener('resize', handleResize);
-      handleResize();
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
     return (
-      <SectionWrapper title='🎓 What I Study' ref={ref}>
-        <Row className='py-2 mt-4' gap={12}>
-          <Col lg={4} md={12} className='mb-42 pe-4'>
-            <h5 className='title-border py-2'>Education</h5>
-            <Row className='mb-4'>
-              <Col xs={12}>
-                <div className='ribbon' ref={ribbonRef}>
-                  <div className='d-flex align-items-center p-4 w-100 h-100'>
-                    <img
-                      alt='HCMUS logo'
-                      src={
-                        'https://cdn.haitrieu.com/wp-content/uploads/2021/11/Logo-DH-Khoa-Hoc-Tu-Nhien-%E2%80%93-HCMUS.png'
-                      }
-                      width={'90px'}
-                      className={showLogo ? 'me-4' : 'd-none'}
-                    />
-                    <div className='mt-4 overflow-hidden pe-4'>
-                      <p className='text-university'>University of Science</p>
-                      <p className='text-degree'>
-                        Bachelor's degree of Infomation Technology
-                      </p>
-                    </div>
-                  </div>
+      <SectionWrapper title="🎓 What I Study" ref={ref}>
+        <div className="study-grid">
+          <div className="study-card">
+            <h3 className="card-title">Education</h3>
+            <div className="education-item">
+              <img
+                width={"90px"}
+                src="./study/hcmus-logo.webp"
+                alt="education"
+              />
+              <div>
+                <p className="edu-school">University of Science</p>
+                <p className="edu-degree">
+                  Bachelor's degree of Information Technology (Second Degree)
+                </p>
+                <p className="edu-time">2019 – 2022</p>
+              </div>
+            </div>
+          </div>
 
-                  <div className='wrap'>
-                    <span className='ribbon6'>VNUHCM</span>
-                  </div>
-                </div>
-              </Col>
-            </Row>
-          </Col>
-          <Col lg={8} md={12}>
-            <div style={{ width: 490 }}>
-              <h5 className='title-border py-2'>Certifications</h5>
+          <div className="study-card">
+            <h3 className="card-title">Certifications</h3>
+            <div style={{ display: "flex" }}>
+              <ul className="cert-list me-5">
+                {study.certificates.details.slice(0, 3).map((i) => (
+                  <li key={i.title} title={`View this certificate`}>
+                    <img width="30" src={i.logo} alt="certificate" />
+                    <a
+                      href={`${location.href}${i.link}`}
+                      target="_blank"
+                      className="badge__link"
+                    >
+                      <span className="ml-5">{i.subtitle}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <ul className="cert-list">
+                {study.certificates.details.slice(3).map((i) => (
+                  <li key={i.title} title={`View this certificate`}>
+                    <img width="20" src={i.logo} alt="certificate" />
+                    <a
+                      href={`${location.href}${i.link}`}
+                      target="_blank"
+                      className="badge__link"
+                    >
+                      <span className="ml-5">{i.subtitle}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className='d-flex-inline mb-1 justify-content-stretch'>
-              {study.certificates.details.map((i) => (
-                <Badge key={i.title} {...i} />
-              ))}
-            </div>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </SectionWrapper>
     );
   }

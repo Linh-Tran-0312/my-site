@@ -15,9 +15,9 @@ const data = {
   loftyWork: {
     tooltip: 'View Project Details',
     modal: {
-      title: 'Moatable | LoftyWork',
+      title: 'Moatable | Lofty CRM',
       content:
-        "<p>LoftyWorks is a property management platform that powers customers' portfolio with a fully integrated solution covering supplier, document and list management, compliance monitoring and kanban-style works order processing.</p><p>Tech stack: <ul><li>Cloud-based infrastructure: Amazon Web Services (AWS) </li><li>Database: MySQL</li><li>Back end frameworks: AppSync and Java Spring Boot.</li><li>Front end libraries: React, Vite, Material Design.</li><li>Design tool: Figma.</li><li>Tools: Github, Jira.</li><li>Methodologies: Agile Scrum.</li></ul></p>",
+        "<p>Lofty CRM is an all-in-one real estate platform that helps agents manage leads, automate marketing, and grow their business with AI-powered tools. Formerly known as Chime, it combines CRM, IDX websites, communication, and analytics into a single system.</p><p>Tech stack: <ul><li>Cloud-based infrastructure: Amazon Web Services (AWS) </li><li>Database: MySQL</li><li>Back end frameworks: Java Spring Boot.</li><li>Front end libraries: React, Vite, Material Design.</li><li>Design tool: Figma.</li><li>Tools: Github, Jira.</li><li>Methodologies: Agile Scrum.</li></ul></p>",
     },
   },
   billingSystem: {
@@ -41,7 +41,7 @@ const data = {
     modal: {
       title: 'Moatable | My Role',
       content:
-        '<p>Responsible for frontend development across multiple projects in the Lofty ecosystem, including LoftyWork and the Billing System</p><p>Worked with a range of frontend tools and libraries such as React, Vue, Material UI, Vite, Webpack, and more.</p><p>In addition to feature development, contributed to various enhancements and performance optimizations:<ul><li>Improved React application performance by applying best practices.</li><li>Boosted project quality and team collaboration by establishing coding standards and maintaining technical documentation.</li></ul></p>',
+        '<p>Responsible for frontend development across multiple projects in the Lofty ecosystem, including Lofty and the Billing System</p><p>Worked with a range of frontend tools and libraries such as React, Vue, Material UI, Vite, Webpack, and more.</p><p>In addition to feature development, contributed to various enhancements and performance optimizations:<ul><li>Improved React application performance by applying best practices.</li><li>Boosted project quality and team collaboration by establishing coding standards and maintaining technical documentation.</li></ul></p>',
     },
   },
 };
@@ -114,7 +114,7 @@ function SalesHood() {
             className='hex bg-blue-4 text-white pointer'
             title={data[keys.loftyWork].tooltip}
           >
-            LoftyWork
+            Lofty CRM
           </div>
         </div>
         <div className='hex-wrap'>
