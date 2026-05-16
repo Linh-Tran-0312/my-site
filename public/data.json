@@ -183,6 +183,33 @@
       "width": "96%",
       "height": "24%",
       "margin": 25
+    },
+    {
+      "color": "#C97C7C",
+      "title": "Hacking MySQL",
+      "author": "Lukas Vileikis",
+      "link": "https://linhnote.hashnode.dev/review-of-advanced-react-by-nadia-makarevich",
+      "width": "100%",
+      "height": "25%",
+      "margin": 0
+    },
+    {
+      "color": "#C97C7C",
+      "title": "Microservices Patterns",
+      "author": "CHRIS RICHARDSON",
+      "link": "https://linhnote.hashnode.dev/review-of-web-performance-fundamentals-by-nadia-makarevich",
+      "width": "96%",
+      "height": "24%",
+      "margin": 10
+    },
+    {
+      "color": "#C97C7C",
+      "title": "Designing Event-Driven Systems",
+      "author": "Ben Stopford",
+      "link": "https://linhnote.hashnode.dev/review-of-modern-frontend-development-with-node-js-by-florian-rappl",
+      "width": "96%",
+      "height": "24%",
+      "margin": 25
     }
   ],
   "study" : {
@@ -215,6 +242,12 @@
           "link": "study/agile.jpg"
         },
         {
+          "title": "Cloud",
+          "subtitle": "AWS Certified Solutions Architect",
+          "logo": "./study/aws-log-alt.png",
+          "link": "study/aws.jpg"
+        },
+        {
           "title": "AI",
           "subtitle": "Claude Code in Action",
           "logo": "./study/anthropic-logo.jpeg",
@@ -224,6 +257,12 @@
           "title": "AI",
           "subtitle": "Introduction to agent skills",
           "logo": "./study/anthropic-logo.jpeg",
+          "link": "study/claude-skill.jpg"
+        },
+        {
+          "title": "AI",
+          "subtitle": "GitHub Agentic AI Developer",
+          "logo": "./study/github-logo.png",
           "link": "study/claude-skill.jpg"
         }
       ]

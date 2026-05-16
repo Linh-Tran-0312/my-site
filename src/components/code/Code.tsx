@@ -36,22 +36,21 @@ const Code = forwardRef<HTMLDivElement, { projects: CardProps[] }>(
                       <h5> My Skills</h5>
                       <p>
                         <strong> Programming languages</strong>: HTML, CSS,
-                        JavaScript/TypeScript, Ruby
+                        JavaScript/TypeScript, Java
                       </p>
                       <p>
-                        <strong>Backend</strong>: NodeJS, Express, SQL
+                        <strong>Backend</strong>: Java, Spring Boot, NodeJS, Express, SQL
                       </p>
                       <p>
                         <strong>Frontend</strong>: React, Redux, React Query,
                         Ant Design, Material UI, Webpack, Vite bundler, Jest,
                         Testing Library
                       </p>
-                      {/* <p>
-                        <strong>AI</strong>: OpenAI API, LangChain, LLMs,
-                        HuggingFace
-                      </p> */}
                       <p>
-                        <strong>Others</strong>: Linux OS, Docker, Git version
+                        <strong>AI Leverage</strong>: Agentic coding with Claude, Cursor
+                      </p>
+                      <p>
+                        <strong>Others</strong>: kubernetes, Linux OS, Docker, Git version
                         control, CI/CD with Github Action and Gitlab
                       </p>
                     </div>
