@@ -42,7 +42,7 @@ const Study = forwardRef<HTMLDivElement, { study: StudyProps }>(
             <h3 className="card-title">Certifications</h3>
             <div style={{ display: "flex" }}>
               <ul className="cert-list me-5">
-                {study.certificates.details.slice(0, 3).map((i) => (
+                {study.certificates.details.slice(0, 4).map((i) => (
                   <li key={i.title} title={`View this certificate`}>
                     <img width="30" src={i.logo} alt="certificate" />
                     <a
@@ -56,7 +56,7 @@ const Study = forwardRef<HTMLDivElement, { study: StudyProps }>(
                 ))}
               </ul>
               <ul className="cert-list">
-                {study.certificates.details.slice(3).map((i) => (
+                {study.certificates.details.slice(4).map((i) => (
                   <li key={i.title} title={`View this certificate`}>
                     <img width="20" src={i.logo} alt="certificate" />
                     <a

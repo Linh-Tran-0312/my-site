@@ -2,27 +2,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState, memo } from 'react';
 import './App.css';
+import AiAssistant from './components/ai-assistant/AiAssistant';
+import { DATA_API_URL } from './config/api';
 import Code from './components/code/Code';
 import LoadingScreen from './components/loading/Loading';
 import Welcome from './components/loading/Welcome';
-import Me, { About } from './components/me/Me';
-import { Nav, NavItemType } from './components/nav/Nav';
-import Read, { Book } from './components/read/Read';
-import { CardProps } from './components/share/custom-card/CustomCard';
-import Study, { StudyProps } from './components/study/Study';
-import Work, { Experience } from './components/work/Work';
+import Me from './components/me/Me';
+import { NavItemType } from './components/nav/Nav';
+import Read from './components/read/Read';
+import Study from './components/study/Study';
+import Work from './components/work/Work';
 import Write from './components/write/Write';
 import Layout from './Layout';
+import { SiteData } from './types/siteData';
 
-type Data = {
-  about: About;
-  nav: Nav;
-  projects: CardProps[];
-  blogs: CardProps[];
-  experience: Experience[];
-  study: StudyProps;
-  books: Book[];
-};
 const getData = async (path: string) => {
   const data = await fetch(path);
   return data.json();
@@ -32,13 +25,17 @@ const Content = ({
   data,
 }: {
   combinedRef: (navItem: NavItemType) => (node: HTMLDivElement) => void;
-  data: Data;
+  data: SiteData;
 }) => {
   return (
     <>
       <Me ref={combinedRef('me')} me={data.about} />
       <Work ref={combinedRef('work')} experience={data.experience} />
-      <Code ref={combinedRef('code')} projects={data.projects} />
+      <Code
+        ref={combinedRef('code')}
+        projects={data.projects}
+        skills={data.skills}
+      />
       <Write ref={combinedRef('write')} blogs={data.blogs} />
       <Read ref={combinedRef('read')} books={data.books} />
       <Study ref={combinedRef('study')} study={data.study} />
@@ -49,11 +46,11 @@ const MemoContent = memo(Content, (prevProps, nextProps) => {
   return prevProps.data === nextProps.data;
 });
 const App = () => {
-  const [data, setData] = useState<Data>();
+  const [data, setData] = useState<SiteData>();
 
   useEffect(() => {
     setTimeout(() => {
-      getData('data.json').then((data) => setData(data));
+      getData(DATA_API_URL).then((data) => setData(data));
     }, 100);
   }, []);
 
@@ -69,6 +66,7 @@ const App = () => {
           <MemoContent combinedRef={combinedRef} data={data} />
         )}
       />
+      <AiAssistant />
     </>
   );
 };

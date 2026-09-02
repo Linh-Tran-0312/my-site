@@ -1,0 +1,21 @@
+name = "my-site-ai-assistant"
+main = "src/index.ts"
+compatibility_date = "2026-08-31"
+
+[vars]
+GROQ_MODEL = "openai/gpt-oss-20b"
+# Any http(s)://localhost:<port> origin is allowed automatically for local dev.
+ALLOWED_ORIGINS = "https://linh-tran-0312.github.io"
+
+[[kv_namespaces]]
+binding = "SITE_DATA"
+id = "121d13b3dff64fa0818cf4a5b3351466"
+
+[[d1_databases]]
+binding = "LEADS_DB"
+database_name = "my-site-leads"
+database_id = "6f9e7c6f-dd21-45ea-9206-65789e01c25f"
+
+# Secrets, not committed anywhere — set with:
+#   wrangler secret put GROQ_API_KEY
+#   wrangler secret put ADMIN_PASSWORD
