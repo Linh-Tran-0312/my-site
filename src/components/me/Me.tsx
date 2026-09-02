@@ -1,6 +1,5 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import parse from 'html-react-parser';
 import { forwardRef, useMemo, useState } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import Typewriter from 'typewriter-effect';
@@ -12,7 +11,7 @@ const profileIcons = {
 };
 export type About = {
   greeting: string;
-  introduction: string;
+  introductionParagraphs: string[];
   profiles: { type: keyof typeof profileIcons; title: string; link: string }[];
 };
 
@@ -78,7 +77,9 @@ const Me = forwardRef<HTMLDivElement, { me: About }>(({ me }, ref) => {
             />
             {showHi && <span className='ps-2'>👋</span>}
           </h2>
-          {parse(me.introduction)}
+          {me.introductionParagraphs.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
           <div className='d-flex justify-content-start align-items-start'>
             {me.profiles.map((p) => (
               <a

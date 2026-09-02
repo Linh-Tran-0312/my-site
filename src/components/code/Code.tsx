@@ -6,8 +6,12 @@ import { CardProps, CustomCard } from '../share/custom-card/CustomCard';
 import SectionWrapper from '../share/SectionWrapper';
 import './Code.css';
 
-const Code = forwardRef<HTMLDivElement, { projects: CardProps[] }>(
-  ({ projects }, ref) => {
+export type Skill = { label: string; value: string };
+
+const Code = forwardRef<
+  HTMLDivElement,
+  { projects: CardProps[]; skills: Skill[] }
+>(({ projects, skills }, ref) => {
     return (
       <SectionWrapper
         ref={ref}
@@ -34,25 +38,11 @@ const Code = forwardRef<HTMLDivElement, { projects: CardProps[] }>(
                   >
                     <div className='bg-white-blur p-4 h-100'>
                       <h5> My Skills</h5>
-                      <p>
-                        <strong> Programming languages</strong>: HTML, CSS,
-                        JavaScript/TypeScript, Java
-                      </p>
-                      <p>
-                        <strong>Backend</strong>: Java, Spring Boot, NodeJS, Express, SQL
-                      </p>
-                      <p>
-                        <strong>Frontend</strong>: React, Redux, React Query,
-                        Ant Design, Material UI, Webpack, Vite bundler, Jest,
-                        Testing Library
-                      </p>
-                      <p>
-                        <strong>AI Leverage</strong>: Agentic coding with Claude, Cursor
-                      </p>
-                      <p>
-                        <strong>Others</strong>: kubernetes, Linux OS, Docker, Git version
-                        control, CI/CD with Github Action and Gitlab
-                      </p>
+                      {skills.map((skill, i) => (
+                        <p key={i}>
+                          <strong>{skill.label}</strong>: {skill.value}
+                        </p>
+                      ))}
                     </div>
                   </Col>
                 </Row>

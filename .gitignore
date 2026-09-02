@@ -11,6 +11,14 @@ node_modules
 dist
 dist-ssr
 *.local
+*.tsbuildinfo
+.env
+.env.*
+
+# Cloudflare Worker
+worker/.wrangler
+worker/.dev.vars
+!worker/.dev.vars.example
 
 # Editor directories and files
 .vscode/*

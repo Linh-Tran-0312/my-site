@@ -1,4 +1,3 @@
-import parse from 'html-react-parser';
 import { forwardRef } from 'react';
 import SectionWrapper from '../share/SectionWrapper';
 import SalesHood from './Hexagons/SalesHood';
@@ -9,7 +8,7 @@ export type Experience = {
   period: string;
   position: string;
   company: 'SalesHood' | 'Moatable';
-  description: string;
+  descriptionParagraphs: string[];
 };
 const HexagonMap = {
   SalesHood: <SalesHood />,
@@ -33,7 +32,9 @@ const Work = forwardRef<HTMLDivElement, { experience: Experience[] }>(
                   <p>{e.period}</p>
                 </div>
                 <p className='text-secondary'>{e.position}</p>
-                {parse(e.description)}
+                {e.descriptionParagraphs.map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
               </div>
             </Col>
             <Col lg={6} xs={12} className='d-flex-center p-4'>

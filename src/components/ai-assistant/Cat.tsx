@@ -5,8 +5,9 @@ type Props = {
     active: string;
   };
   width: number;
+  forceActive?: boolean;
 };
-function Cat({ src, width }: Props) {
+function Cat({ src, width, forceActive = false }: Props) {
   const [isHovered, setIsHovered] = useState(false);
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -16,7 +17,7 @@ function Cat({ src, width }: Props) {
   };
   return (
     <img
-      src={isHovered ? src.active : src.static}
+      src={isHovered || forceActive ? src.active : src.static}
       width={width}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
