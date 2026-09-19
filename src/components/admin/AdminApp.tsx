@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Alert, Button, Container, Form, Nav, Spinner, Tab } from 'react-bootstrap';
 import { ADMIN_DATA_API_URL, DATA_API_URL, WORKER_BASE_URL } from '../../config/api';
 import { SiteData } from '../../types/siteData';
+import { getDefaultHexagonsByCompany } from '../work/Hexagons/defaultHexagons';
 import CodeSection from './sections/CodeSection';
 import LeadsSection from './sections/LeadsSection';
 import MeSection from './sections/MeSection';
@@ -62,6 +63,13 @@ function AdminApp() {
         ...loaded,
         personalInfo: loaded.personalInfo ?? [],
         cv: loaded.cv ?? { url: '', fileName: '' },
+        experience: (loaded.experience ?? []).map((exp) => ({
+          ...exp,
+          hexagons:
+            exp.hexagons && exp.hexagons.length > 0
+              ? exp.hexagons
+              : getDefaultHexagonsByCompany(exp.company),
+        })),
       });
     } catch (err) {
       setSaveError(err instanceof Error ? err.message : 'Failed to load data');
@@ -191,27 +199,46 @@ function AdminApp() {
 
   return (
     <Container className='py-4'>
-      <div className='d-flex justify-content-between align-items-center mb-4'>
-        <h2>Site Data Admin</h2>
-        <Button variant='outline-secondary' size='sm' onClick={handleLogout}>
-          Log out
-        </Button>
-      </div>
-
-      {saveError && <Alert variant='danger'>{saveError}</Alert>}
-      {saveSuccess && <Alert variant='success'>{saveSuccess}</Alert>}
-
       <Tab.Container
         activeKey={activeSection}
         onSelect={(k) => setActiveSection((k as SectionKey) ?? 'me')}
       >
-        <Nav variant='tabs' className='mb-4'>
-          {SECTIONS.map((key) => (
-            <Nav.Item key={key}>
-              <Nav.Link eventKey={key}>{SECTION_LABELS[key]}</Nav.Link>
-            </Nav.Item>
-          ))}
-        </Nav>
+        <div
+          className='pb-2 mb-4'
+          style={{
+            position: 'sticky',
+            top: 0,
+            zIndex: 10,
+            backgroundColor: '#fff',
+          }}
+        >
+          <div className='d-flex justify-content-between align-items-center py-3'>
+            <h2 className='mb-0'>Site Data Admin</h2>
+            <div className='d-flex gap-2'>
+              <Button onClick={handleSave} disabled={isSaving}>
+                {isSaving ? 'Saving...' : 'Save changes'}
+              </Button>
+              <Button
+                variant='outline-secondary'
+                size='sm'
+                onClick={handleLogout}
+              >
+                Log out
+              </Button>
+            </div>
+          </div>
+          <Nav variant='tabs'>
+            {SECTIONS.map((key) => (
+              <Nav.Item key={key}>
+                <Nav.Link eventKey={key}>{SECTION_LABELS[key]}</Nav.Link>
+              </Nav.Item>
+            ))}
+          </Nav>
+        </div>
+
+        {saveError && <Alert variant='danger'>{saveError}</Alert>}
+        {saveSuccess && <Alert variant='success'>{saveSuccess}</Alert>}
+
         <Tab.Content>
           <Tab.Pane eventKey='me'>
             <MeSection
@@ -264,12 +291,6 @@ function AdminApp() {
           </Tab.Pane>
         </Tab.Content>
       </Tab.Container>
-
-      <div className='mt-4'>
-        <Button onClick={handleSave} disabled={isSaving}>
-          {isSaving ? 'Saving...' : 'Save changes'}
-        </Button>
-      </div>
     </Container>
   );
 }

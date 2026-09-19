@@ -4,18 +4,19 @@ import {
   faPaw,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { Mascot } from 'page-mascot';
 import React, { useEffect, useRef, useState } from 'react';
 import { Button, FormControl, InputGroup } from 'react-bootstrap';
 import Typewriter from 'typewriter-effect';
 import { CHAT_API_URL } from '../../config/api';
-import Cat from './Cat';
+// import Cat from './Cat';
 import { MODE } from './constant';
 import { Lead } from './lead';
 
-const hozCatSrc = {
-  static: `${import.meta.env.BASE_URL}chat/static-cat-2.png`,
-  active: `${import.meta.env.BASE_URL}chat/active-cat-2.png`,
-};
+// const hozCatSrc = {
+//   static: `${import.meta.env.BASE_URL}chat/static-cat-2.png`,
+//   active: `${import.meta.env.BASE_URL}chat/active-cat-2.png`,
+// };
 
 const MAX_HISTORY_MESSAGES = 10;
 
@@ -38,7 +39,7 @@ const ChatBox: React.FC<{ setMode: (mode: string) => void; lead: Lead }> = ({
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [isInputFocused, setIsInputFocused] = useState<boolean>(false);
+  // const [isInputFocused, setIsInputFocused] = useState<boolean>(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -65,7 +66,7 @@ const ChatBox: React.FC<{ setMode: (mode: string) => void; lead: Lead }> = ({
     ]);
     setInput('');
     setIsLoading(true);
-    setIsInputFocused(false);
+    // setIsInputFocused(false);
 
     try {
       const res = await fetch(CHAT_API_URL, {
@@ -112,13 +113,19 @@ const ChatBox: React.FC<{ setMode: (mode: string) => void; lead: Lead }> = ({
       <div className='position-relative d-flex flex-column'>
         <div
           className='ai-chat-cat'
-          onClick={() => setMode(MODE.SLEEPING)}
-          title='Bye'
+          // onClick={() => setMode(MODE.SLEEPING)}
+          // title='Bye'
         >
-          <Cat
+          {/* <Cat
             src={hozCatSrc}
             width={100}
             forceActive={isInputFocused && !isLoading}
+          /> */}
+          <Mascot
+            size={100}
+            directions={`${import.meta.env.BASE_URL}mascots/cat-directions.webp`}
+            reactions={`${import.meta.env.BASE_URL}mascots/cat-reactions.webp`}
+            label='mascot'
           />
         </div>
         <div className='ai-chat-header d-flex justify-content-between align-items-center'>
@@ -203,8 +210,8 @@ const ChatBox: React.FC<{ setMode: (mode: string) => void; lead: Lead }> = ({
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              onFocus={() => setIsInputFocused(true)}
-              onBlur={() => setIsInputFocused(false)}
+              // onFocus={() => setIsInputFocused(true)}
+              // onBlur={() => setIsInputFocused(false)}
               disabled={isLoading}
             />
           </InputGroup>

@@ -1,26 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { Mascot } from 'page-mascot';
 import './AiAssistant.css';
-import Cat from './Cat';
+// import Cat from './Cat';
 import ChatBox from './ChatMode';
 import GreetingMode from './GreetingMode';
 import { MODE } from './constant';
 import { Lead, loadStoredLead, storeLead } from './lead';
 
-const verCatSrc = {
-  static: `${import.meta.env.BASE_URL}chat/static-cat-1.png`,
-  active: `${import.meta.env.BASE_URL}chat/active-cat-1.gif`,
-};
+// const verCatSrc = {
+//   static: `${import.meta.env.BASE_URL}chat/static-cat-1.png`,
+//   active: `${import.meta.env.BASE_URL}chat/active-cat-1.gif`,
+// };
 
 // Matches the Welcome overlay's `slideUp` animation duration (see Loading.css).
-const WELCOME_ANIMATION_MS = 2500;
-const BLINK_OPEN_MS = 500;
-const BLINK_CLOSE_MS = 350;
-const BLINK_COUNT = 2;
+// const WELCOME_ANIMATION_MS = 2500;
+// const BLINK_OPEN_MS = 500;
+// const BLINK_CLOSE_MS = 350;
+// const BLINK_COUNT = 2;
 
 function AiAssistant() {
   const [mode, setMode] = useState(MODE.SLEEPING);
   const [lead, setLead] = useState<Lead | null>(() => loadStoredLead());
-  const [isBlinking, setIsBlinking] = useState(false);
+  // const [isBlinking, setIsBlinking] = useState(false);
 
   const handleLeadCreated = (newLead: Lead) => {
     storeLead(newLead);
@@ -28,17 +29,17 @@ function AiAssistant() {
     setMode(MODE.CHATTING);
   };
 
-  useEffect(() => {
-    const timers: ReturnType<typeof setTimeout>[] = [];
-    let t = WELCOME_ANIMATION_MS;
-    for (let i = 0; i < BLINK_COUNT; i++) {
-      timers.push(setTimeout(() => setIsBlinking(true), t));
-      t += BLINK_OPEN_MS;
-      timers.push(setTimeout(() => setIsBlinking(false), t));
-      t += BLINK_CLOSE_MS;
-    }
-    return () => timers.forEach(clearTimeout);
-  }, []);
+  // useEffect(() => {
+  //   const timers: ReturnType<typeof setTimeout>[] = [];
+  //   let t = WELCOME_ANIMATION_MS;
+  //   for (let i = 0; i < BLINK_COUNT; i++) {
+  //     timers.push(setTimeout(() => setIsBlinking(true), t));
+  //     t += BLINK_OPEN_MS;
+  //     timers.push(setTimeout(() => setIsBlinking(false), t));
+  //     t += BLINK_CLOSE_MS;
+  //   }
+  //   return () => timers.forEach(clearTimeout);
+  // }, []);
 
   const handleClick = () => {
     if (mode === MODE.SLEEPING) {
@@ -74,10 +75,16 @@ function AiAssistant() {
         >
           <img
             width={30}
-            src={`${import.meta.env.BASE_URL}chat/star.png`}
+            src={`${import.meta.env.BASE_URL}chat/wired-gradient-2474-sparkles.gif`}
             className={mode === MODE.SLEEPING ? 'ai-star-icon' : 'd-none'}
           />
-          <Cat width={70} src={verCatSrc} forceActive={isBlinking} />
+          {/* <Cat width={70} src={verCatSrc} forceActive={isBlinking} /> */}
+          <Mascot
+            size={140}
+            directions={`${import.meta.env.BASE_URL}mascots/cat-directions.webp`}
+            reactions={`${import.meta.env.BASE_URL}mascots/cat-reactions.webp`}
+            label='mascot'
+          />
         </div>
       ) : null}
     </>

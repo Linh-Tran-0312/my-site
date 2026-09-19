@@ -1,6 +1,16 @@
 .code-background {
   background: url('/project/tech.jpg') ;
 }
+/* Only stretch the first card to match the "My Skills" panel's height
+   when they're side-by-side row siblings (Bootstrap's lg breakpoint).
+   Below that they stack, so this card is alone in its own flex line and
+   `height: 100%` has nothing valid to resolve against, which collapsed
+   it on mobile. */
+@media (min-width: 992px) {
+  .first-project-card .custom-card {
+    height: 100%;
+  }
+}
 .projects .custom-card__image img {
   object-fit: contain;
 }
