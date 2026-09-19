@@ -1,5 +1,3 @@
-import { faCode } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { forwardRef } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { CardProps, CustomCard } from '../share/custom-card/CustomCard';
