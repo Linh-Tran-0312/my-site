@@ -17,14 +17,13 @@ const Code = forwardRef<
         ref={ref}
         title={
           <span>
-            {<Icon icon={faCode} className='text-base' fontSize={26} />} What I
-            Code
+            💻 What I Code
           </span>
         }
       >
         <Row className='d-flex mt-4 projects'>
           <Row className='mb-4 column-reverse'>
-            <Col lg={4} sm={12}>
+            <Col lg={4} sm={12} className='first-project-card'>
               <CustomCard {...projects[0]} tooltip='Open in Github' />
             </Col>
             <Col lg={8} sm={12}>

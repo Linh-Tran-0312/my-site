@@ -1,27 +1,25 @@
 import { forwardRef } from 'react';
 import SectionWrapper from '../share/SectionWrapper';
-import SalesHood from './Hexagons/SalesHood';
-import Moatable from './Hexagons/Moatable';
+import HexagonDiagram from './Hexagons/HexagonDiagram';
+import { getDefaultHexagonsByCompany } from './Hexagons/defaultHexagons';
+import { HexCell } from './Hexagons/hexTypes';
 import { Col, Row } from 'react-bootstrap';
 import './Work.css';
 export type Experience = {
   period: string;
   position: string;
-  company: 'SalesHood' | 'Moatable';
+  company: string;
   descriptionParagraphs: string[];
-};
-const HexagonMap = {
-  SalesHood: <SalesHood />,
-  Moatable: <Moatable />,
+  hexagons: HexCell[];
 };
 const Work = forwardRef<HTMLDivElement, { experience: Experience[] }>(
   ({ experience }, ref) => {
     return (
-      <SectionWrapper ref={ref} title='💻 Where I Work'>
+      <SectionWrapper ref={ref} title='🏢 Where I Work'>
         {experience.map((e, i) => (
           <Row
             className={i % 2 === 0 ? 'mb-5' : 'row-reverse mb-5'}
-            key={e.company}
+            key={`${e.company}-${i}`}
           >
             <Col lg={6} xs={12}>
               <div className='mt-4'>
@@ -38,7 +36,13 @@ const Work = forwardRef<HTMLDivElement, { experience: Experience[] }>(
               </div>
             </Col>
             <Col lg={6} xs={12} className='d-flex-center p-4'>
-              {HexagonMap[e.company]}
+              <HexagonDiagram
+                cells={
+                  e.hexagons?.length
+                    ? e.hexagons
+                    : getDefaultHexagonsByCompany(e.company)
+                }
+              />
             </Col>
           </Row>
         ))}

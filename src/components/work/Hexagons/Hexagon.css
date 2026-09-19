@@ -1,11 +1,13 @@
- 
+
 .hex-container {
+  /* --wrp is set inline per-instance to the measured container width
+     (capped at 500px), so hexes scale down to fit narrow screens instead
+     of wrapping onto extra lines (which broke the honeycomb interlock). */
   --wrp: 500px;
 }
- 
+
 .hex-wrap {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   align-content: center;
@@ -15,6 +17,9 @@
   --r: 0.24935;
   --r-1: calc(1 / calc(1 - var(--r)));
   --g: 5px;
+  /* Never wider than the design width (--wrp), but shrinks to the actual
+     container width on narrow screens so hexes scale down instead of
+     wrapping onto extra lines (which broke the honeycomb interlock). */
   --w: calc(var(--r-1) * var(--wrp) / 4 - 2 * var(--r-1) * var(--g));
   margin: 0 -1px;
   justify-content: center;
